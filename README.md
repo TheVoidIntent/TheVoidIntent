@@ -6,6 +6,42 @@
 - 😄 Pronouns: he, his, him...
 - ⚡ Fun fact: My physics journey began with imagining a character for a science-fiction novel – a being that could navigate a conceptual "Intent field" with the same precision an octopus uses calculus for camouflage. This led me to explore the idea of a Universe born from its own "Intent to know", and sparked my deep dive into theoretical physics and the creation of my "Information-Intent" Nexus." ...
 
+### 🌀 IntentSim: Simulating a Universe Made of Intent
+IntentSim is a proto-universe simulator where reality emerges not from particles alone, but from intent acting on information. Each particle learns, adapts, and evolves—guided by probabilistic intent fields that filter outcomes, drive interactions, and fuel the birth of structure.
+
+This simulation explores a radical hypothesis:
+
+That intent is the hidden force behind reality, acting as an information filter that shapes complexity, symmetry, and emergent laws of nature.
+
+As the system runs, particles self-organize, undergo phase transitions, and exhibit gravity-like clustering—all recorded in real-time and open for analysis.
+
+### 🌌 Features
+Intent-driven particle evolution & learning
+
+Real-time data syncing (JSON logs auto-pushed to GitHub)
+
+Cluster detection, anomaly logging, and complexity metrics
+
+Visualized transitions in entropy and structure formation
+
+### 🚀 Purpose
+IntentSim is not just a sandbox. It's an experimental lens on how informational universes could evolve—where laws emerge, not from static constants, but from evolving intent-driven constraints.
+
+### 📂 Core Docs
+hypothesis.md — Scientific foundations
+
+analysis.md — Phase logs + data insights
+
+intent-filtering-mechanism.md — Framework explanation
+
+works-cited.md — Source references
+
+SPONSOR.md — Support the research
+
+### 🧪 Status: Active Research
+## 🔁 Logs updating hourly | Built with ❤️ on Lovable.dev
+
+
 <!---
 TheVoidIntent/TheVoidIntent is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.

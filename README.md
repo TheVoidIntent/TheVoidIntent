@@ -37,6 +37,10 @@ intent-filtering-mechanism.md — Framework explanation
 works-cited.md — Source references
 
 SPONSOR.md — Support the research
+## 🙌 Support & Sponsorship
+Help push the boundaries of the Information-Intent Nexus.
+[Become a Patron](https://www.patreon.com/TheVoidIntent)
+
 
 ### 🧪 Status: Active Research
 ## 🔁 Logs updating hourly | Built with ❤️ on Lovable.dev

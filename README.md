@@ -45,6 +45,20 @@ Help push the boundaries of the Information-Intent Nexus.
 ### 🧪 Status: Active Research
 ## 🔁 Logs updating hourly | Built with ❤️ on Lovable.dev
 
+#### 📢 NOTICE
+
+IntentSim is an original scientific simulation and hypothesis-testing framework created by TheVoidIntent LLC.
+
+All original simulations, hypotheses, and visual materials contained within the IntentSim project are protected by copyright.
+
+The term "IntentSim" is used under common law trademark as a unique product of TheVoidIntent.
+
+Use of the name, branding, framework, or data for third-party projects without permission is prohibited.
+
+IntentSim is offered publicly for educational and scientific curiosity, and is not yet peer-reviewed. Please contact TheVoidIntent for inquiries regarding collaboration, licensing, or commercial adaptation.
+
+
+
 
 <!---
 TheVoidIntent/TheVoidIntent is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.

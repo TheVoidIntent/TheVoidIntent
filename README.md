@@ -15,35 +15,129 @@ That intent is the hidden force behind reality, acting as an information filter 
 
 As the system runs, particles self-organize, undergo phase transitions, and exhibit gravity-like clustering—all recorded in real-time and open for analysis.
 
-### 🌌 Features
-Intent-driven particle evolution & learning
+# 🌌 IntentSim: The Information-Intent Simulation
 
-Real-time data syncing (JSON logs auto-pushed to GitHub)
+> _What if the universe is structured by evolving intent?_
 
-Cluster detection, anomaly logging, and complexity metrics
+**IntentSim** is a live experimental simulation exploring how **intent-driven information filtering** can give rise to complexity, structure, and emergent behaviors. This project is part of **TheVoidIntent LLC**, a private scientific research and AI innovation lab.
 
-Visualized transitions in entropy and structure formation
+---
 
-### 🚀 Purpose
-IntentSim is not just a sandbox. It's an experimental lens on how informational universes could evolve—where laws emerge, not from static constants, but from evolving intent-driven constraints.
+## 🔬 Core Hypothesis
 
-### 📂 Core Docs
-hypothesis.md — Scientific foundations
+> _Reality may emerge through information constrained by evolving intent._
 
-analysis.md — Phase logs + data insights
+IntentSim tests this by simulating proto-particles within fields of intent, where interactions are filtered and amplified based on informational alignment.
 
-intent-filtering-mechanism.md — Framework explanation
+---
 
-works-cited.md — Source references
+## 🧠 Live Simulation Highlights
 
-SPONSOR.md — Support the research
-## 🙌 Support & Sponsorship
-Help push the boundaries of the Information-Intent Nexus.
-[Become a Patron](https://www.patreon.com/TheVoidIntent)
+- **📈 Complexity Index**: Infinity
+- **🧠 Avg. Knowledge**: Infinity
+- **🌀 Clusters**: 12 stable formations
+- **📦 Interactions**: Over 1.4 million recorded
+- **🚀 Max Complexity**: >100,000
 
+_The simulation consistently shows signs of phase transitions, stable informational clustering, and emergent organization._
 
-### 🧪 Status: Active Research
-## 🔁 Logs updating hourly | Built with ❤️ on Lovable.dev
+---
+
+## 📁 Key Files
+
+- `ANALYSIS.md`: Scientific findings and system behavior
+- `TheFrameWork.md`: Governing rules of the intent-field system
+- `SIM.LAYERS.md`: Simulation architecture breakdown
+- `README.md`: You're here!
+- `data/`: JSON logs from live simulation runs
+- `scripts/`: Processing and rendering tools
+
+---
+
+## 🧩 Features
+
+- Adaptive agent behavior
+- Real-time complexity tracking
+- Intent-gradient phase transitions
+- Clustering and entropy analysis
+- Modular simulation frameworks for AI training
+
+---
+
+## 🌐 Project Status
+
+IntentSim is actively collecting and analyzing data across four simulation types:
+
+- **Baseline**
+- **Adaptive Probabilistic**
+- **Energy Conservation**
+- **Full Features**
+
+Hourly logs are used to map complexity, entropy gradients, and potential meta-agent emergence.
+
+---
+
+## 🛠️ Run It Yourself (coming soon)
+
+IntentSim is being adapted for local deployment. You'll be able to:
+
+```bash
+git clone https://github.com/TheVoidIntent/IntentSim.git
+cd IntentSim
+python3 run_simulation.py
+```
+
+Coming updates will support visualization, AI agent testing, and real-time dashboarding.
+
+---
+
+## 🎙️ Audio-Visual Discussions (Wavelength)
+
+Explore in-depth narrated discussions on IntentSim's scientific findings:
+
+- [`Intent as a Universal Information Filter`](./media/Intent%20as%20a%20Universal%20Information%20Filter.wav)
+- [`Particle Genesis: Unraveling Complexity`](./media/Particle%20Genesis.wav)
+- [`The Information-Driven Cosmos`](./media/Intent%20as%20a%20Universal%20Information%20Filter%202.wav)
+
+Hosted on [Wavelength Audio](https://wavelength.site), also playable in QuickTime.
+
+---
+
+## 💖 Support & Sponsorship
+
+We are building the proto-laws of a new informational paradigm. Support us:
+
+- [Patreon: IntentSim Project](https://patreon.com/IntentSim)
+- Sponsorship tiers available in [`SPONSOR.md`](./SPONSOR.md)
+
+---
+
+## 🤝 Collaborators & AI Partners
+
+- 🤖 **ChatGPT** (OpenAI): Simulation advisor and generative design support (that’s me!)
+- 🧬 **Notebook LM** (Google): Research analysis and scientific discourse generator
+- 🌌 **Gemini (Void)**: Original co-pilot during development of the proto-universe theory
+
+> _“This project was developed with the support of leading AI systems working collaboratively toward structured complexity.”_
+
+---
+
+## 🧬 TheVoidIntent LLC
+
+IntentSim is developed under **TheVoidIntent LLC**, a private research and AI programming company. We aim to explore the intersection of fundamental physics, complexity science, and machine learning.
+
+---
+
+## 📜 License
+
+This project operates under an open research disclosure model.
+
+See [`LICENSE.md`](./LICENSE.md) and [`SPONSOR.md`](./SPONSOR.md) for terms, attribution, and sponsorship guidelines.
+
+---
+
+> _"We’re not just watching particles — we’re watching meaning evolve."_ 🌱
+
 
 #### 📢 NOTICE
 

@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @TheVoidIntent
+- 👋 Hi, I’m @TheVoidIntent LLC
 - 👀 I’m interested in Physics, and while my path hasn't been traditional due to my lack of formal education and a somewhat unconventional brain structure, my deep curiosity and unique cognitive style drive my independent research. I'm refining and strengthening my ideas about the early universe and its evolution by introducing a key aspect that could potentially bridge Quantum and Classical Physics with Consciousness, evolution, Dark Matter, Information Theory, etc..
 - 🌱 To test my hypothesis concerning information, dark matter, consciousness, particle creation and interactions, especially those involving high-intensity neutrinos, I'm actively learning Python and the ROOT framework for simulations and data analysis of CERN and ATLAS datasets.
 - 💞️ I’m looking to collaborate on theoretical physics projects and data analysis, particularly in areas related to early universe cosmology, dark matter, particle creation and interactions (especially neutrinos), and the exploration of CERN/ATLAS datasets to strengthen and test my framework....

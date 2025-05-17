@@ -141,7 +141,8 @@ IntentSim clustering vs ATLAS jet spread
 Shared attractors suggest a common principle: gravitational intent density
 
 
-<!---
+<© 2025 Marcelo Mezquia / TheVoidIntent LLC. All Rights Reserved.
+The Information–Intent Nexus framework, IntentSim simulation, Intentuitive AI™ systems, and associated documentation (including the Codex) are proprietary intellectual property of TheVoidIntent LLC, protected under U.S. Copyright Law, Trade Secret Protections, and Custom Licensing Agreements. Unauthorized reproduction, commercial use, or creation of derivative works is strictly prohibited without express written permission.
+For licensing inquiries, please contact: TheVoidIntent@intentsim.org!---
 TheVoidIntent/TheVoidIntent is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
 --->

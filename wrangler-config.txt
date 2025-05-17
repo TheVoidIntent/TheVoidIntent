@@ -1,0 +1,117 @@
+# wrangler.toml
+# Configuration for IntentSim Comprehensive AI Assistant System
+
+name = "intentsim-ai-assistant"
+main = "src/worker.js"
+compatibility_date = "2024-05-09"
+compatibility_flags = ["nodejs_compat"]
+
+# KV namespaces for state management and caching
+[[kv_namespaces]]
+binding = "INTENT_STORE"
+id = "your-intent-store-namespace-id"
+preview_id = "your-preview-intent-store-namespace-id"
+
+[[kv_namespaces]]
+binding = "STATE_CACHE"
+id = "your-state-cache-namespace-id"
+preview_id = "your-preview-state-cache-namespace-id"
+
+[[kv_namespaces]]
+binding = "NEURAL_WEIGHTS"
+id = "your-neural-weights-namespace-id"
+preview_id = "your-preview-neural-weights-namespace-id"
+
+# Durable Objects for persistent state management
+[[durable_objects.bindings]]
+name = "INTENT_PROCESSOR"
+class_name = "IntentProcessor"
+script_name = ""
+
+[[migrations]]
+tag = "v1"
+new_classes = ["IntentProcessor"]
+
+# Environmental variables for API keys and configuration
+[vars]
+ENVIRONMENT = "production"
+MAX_INTENT_DEPTH = "10"
+NEURAL_LEARNING_RATE = "0.001"
+SIMULATION_TIMEOUT = "30000"
+DEBUG_MODE = "false"
+
+# Secret variables (set via wrangler secret put)
+# Uncomment the following lines and set your actual secret names
+# ANTHROPIC_API_KEY = "your-anthropic-api-key"
+# OPENAI_API_KEY = "your-openai-api-key"
+# MODEL_ENDPOINT = "your-model-endpoint"
+
+# Binding to other Workers (if needed)
+[[services]]
+binding = "INTENT_ANALYZER"
+service = "intentsim-intent-analyzer"
+environment = "production"
+
+# R2 bucket bindings for large model storage
+[[r2_buckets]]
+binding = "MODEL_STORAGE"
+bucket_name = "intentsim-models"
+preview_bucket_name = "intentsim-models-preview"
+
+# Queue bindings for async processing
+[[queues.producers]]
+queue = "intent-processing-queue"
+binding = "INTENT_QUEUE"
+
+[[queues.consumers]]
+queue = "intent-processing-queue"
+max_batch_size = 50
+max_batch_timeout = 5
+
+# Analytics engine bindings for monitoring
+[[analytics_engine_datasets]]
+binding = "INTENT_ANALYTICS"
+
+# Custom domains (configure after deployment)
+# [[route]]
+# pattern = "ai-assistant.your-domain.com/*"
+# zone_id = "your-zone-id"
+
+# Build configuration
+[build]
+command = "npm run build"
+cwd = "."
+watch_dir = "src"
+
+[build.upload]
+format = "modules"
+dir = "./dist"
+main = "./worker.js"
+
+# Development configuration
+[dev]
+port = 8787
+local_protocol = "http"
+upstream_protocol = "https"
+
+# Limits and performance settings
+[limits]
+# Maximum CPU time per request (in milliseconds)
+cpu_ms = 30000
+# Maximum memory per request (in MB) 
+memory_mb = 512
+
+# Wasm module bindings (if using WebAssembly for performance-critical operations)
+# [[wasm_modules]]
+# binding = "TENSOR_OPS"
+# source = "./wasm/tensor_operations.wasm"
+
+# Tail worker for logging and monitoring
+# [tail_consumers]
+# [[tail_consumers]]
+# service = "intentsim-logger"
+# environment = "production"
+
+# AI configuration (Cloudflare-specific settings)
+[[ai]]
+binding = "AI"

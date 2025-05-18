@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Emotopology 3D Visualization</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body { margin: 0; background-color: #0e0e1a; color: #a6acd9; font-family: Arial, sans-serif; }
+        #plot { width: 100vw; height: 100vh; }
+        h1 { text-align: center; padding: 10px; }
+    </style>
+</head>
+<body>
+
+<h1>IntentSim Nexus Portal: Emotopology Field View</h1>
+<div id="plot"></div>
+
+<script>
+// Example Data (You can replace this with dynamic JSON API calls)
+const data = [
+    { valence: 0.8, focus: 1, temporal: 0.5, resonance: 0.9, complexity: 0.8 },
+    { valence: -0.4, focus: 2, temporal: -0.3, resonance: 0.7, complexity: 0.6 },
+    { valence: 0.2, focus: 0, temporal: 0.9, resonance: 0.5, complexity: 0.4 },
+    { valence: -0.9, focus: 1, temporal: -0.8, resonance: 0.95, complexity: 0.9 },
+    { valence: 0.5, focus: 2, temporal: 0.2, resonance: 0.6, complexity: 0.5 },
+    { valence: 0.0, focus: 1, temporal: 0.0, resonance: 0.8, complexity: 0.7 },
+    // Add more data points as needed
+];
+
+// Extract Arrays
+const x = data.map(d => d.valence);
+const y = data.map(d => d.focus);
+const z = data.map(d => d.temporal);
+const color = data.map(d => d.resonance);
+const size = data.map(d => d.complexity * 40); // Scale marker size
+
+const trace = {
+    x: x,
+    y: y,
+    z: z,
+    mode: 'markers',
+    marker: {
+        size: size,
+        color: color,
+        colorscale: 'Viridis',
+        opacity: 0.8,
+        colorbar: { title: 'Resonance Strength' },
+    },
+    type: 'scatter3d',
+    text: data.map(d => 
+        `Valence: ${d.valence}<br>Intent Focus: ${d.focus}<br>Temporal: ${d.temporal}<br>Resonance: ${d.resonance}<br>Complexity: ${d.complexity}`
+    ),
+    hoverinfo: 'text'
+};
+
+const layout = {
+    paper_bgcolor: '#0e0e1a',
+    plot_bgcolor: '#0e0e1a',
+    margin: { l: 0, r: 0, b: 0, t: 0 },
+    scene: {
+        xaxis: { title: 'Valence', gridcolor: '#3a3f5a', color: '#a6acd9' },
+        yaxis: { title: 'Intent Focus (0: Self, 1: Other, 2: Collective)', gridcolor: '#3a3f5a', color: '#a6acd9' },
+        zaxis: { title: 'Temporal Orientation', gridcolor: '#3a3f5a', color: '#a6acd9' },
+    }
+};
+
+Plotly.newPlot('plot', [trace], layout);
+</script>
+
+</body>
+</html>

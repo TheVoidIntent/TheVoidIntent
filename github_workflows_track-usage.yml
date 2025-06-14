@@ -1,0 +1,66 @@
+name: Track Repository Usage
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # every day at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install requests
+      run: pip install requests
+
+    - name: Fetch and log repo usage
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        REPO: ${{ github.repository }}
+      run: |
+        python <<EOF
+        import os
+        import requests
+        from datetime import datetime
+
+        headers = {
+          "Authorization": f"token {os.getenv('GITHUB_TOKEN')}",
+          "Accept": "application/vnd.github.v3+json"
+        }
+        repo = os.getenv("REPO")
+        log_file = "USAGE_LOG.md"
+
+        def fetch(url):
+            r = requests.get(url, headers=headers)
+            r.raise_for_status()
+            return r.json()
+
+        stars = fetch(f"https://api.github.com/repos/{repo}").get('stargazers_count', 0)
+        forks = fetch(f"https://api.github.com/repos/{repo}").get('forks_count', 0)
+        traffic = fetch(f"https://api.github.com/repos/{repo}/traffic/views")
+        clones = fetch(f"https://api.github.com/repos/{repo}/traffic/clones")
+
+        now = datetime.utcnow().isoformat()
+        entry = f"## {now}\nStars: {stars}\nForks: {forks}\nUnique Visitors: {traffic.get('uniques',0)}\nTotal Views: {traffic.get('count',0)}\nUnique Cloners: {clones.get('uniques',0)}\nTotal Clones: {clones.get('count',0)}\n\n"
+        if os.path.exists(log_file):
+            with open(log_file, "a") as f:
+                f.write(entry)
+        else:
+            with open(log_file, "w") as f:
+                f.write("# Repository Usage Log\n\n")
+                f.write(entry)
+        EOF
+
+    - name: Commit usage log
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add USAGE_LOG.md
+        git commit -m "Update usage log" || echo "No changes to commit"
+        git push

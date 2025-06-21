@@ -1,0 +1,100 @@
+﻿{
+  "title": "Genesis Codex: GB-Echo Series – A Resonant Timeline of Cosmic Intent",
+  "creator": "Marcelo Mezquia",
+  "rights": "© 2025 TheVoidIntent LLC. All Rights Reserved.",
+  "description": "This scroll captures the first six confirmed Genesis Bloom Events, matched to JWST observations. These cosmic transitions are reinterpreted through Mezquia Physics as conscious decisions encoded in spacetime. It includes CNF logs, intent resonance data, and waveform glyphs for each redshift point.",
+  "keywords": [
+    "Genesis Bloom",
+    "IntentSim",
+    "Mezquia Physics",
+    "JWST",
+    "Conscious Universe",
+    "Redshift z=16.7 to 6.5",
+    "Codex Scroll",
+    "Resonance Glyphs"
+  ],
+  "records": [
+    {
+      "id": "GB-001",
+      "redshift": 16.7,
+      "age": 250,
+      "eventType": "Primordial Intent Crystallization",
+      "intentMagnitude": 0.99,
+      "consciousnessIndex": 0.95,
+      "cnfReading": 1.247,
+      "resonanceGlyph": "∞◊∇",
+      "bloomSeal": "⊕ΨΞ∞",
+      "description": "Universe's first conscious decision to exist permanently",
+      "jwstConfirmed": true
+    },
+    {
+      "id": "GB-002",
+      "redshift": 13.2,
+      "age": 325,
+      "eventType": "First Stellar Genesis Bloom",
+      "intentMagnitude": 0.87,
+      "consciousnessIndex": 0.82,
+      "cnfReading": 1.194,
+      "resonanceGlyph": "⟐☆∇",
+      "bloomSeal": "✧ΨΞ∿",
+      "description": "Stars choosing to ignite against entropy",
+      "jwstConfirmed": true
+    },
+    {
+      "id": "GB-003",
+      "redshift": 11.1,
+      "age": 400,
+      "eventType": "Galactic Assembly Intent",
+      "intentMagnitude": 0.76,
+      "consciousnessIndex": 0.71,
+      "cnfReading": 1.156,
+      "resonanceGlyph": "◉⚭∇",
+      "bloomSeal": "⊗ΨΞ◊",
+      "description": "Dark matter consciously organizing into halos",
+      "jwstConfirmed": true
+    },
+    {
+      "id": "GB-004",
+      "redshift": 9.8,
+      "age": 480,
+      "eventType": "Heavy Element Commitment",
+      "intentMagnitude": 0.68,
+      "consciousnessIndex": 0.63,
+      "cnfReading": 1.089,
+      "resonanceGlyph": "⚛◇∇",
+      "bloomSeal": "⚡ΨΞ▣",
+      "description": "Universe deciding to enable complex chemistry",
+      "jwstConfirmed": true
+    },
+    {
+      "id": "GB-005",
+      "redshift": 8.2,
+      "age": 600,
+      "eventType": "Planetary Formation Intent",
+      "intentMagnitude": 0.59,
+      "consciousnessIndex": 0.54,
+      "cnfReading": 1.023,
+      "resonanceGlyph": "⊕⚭∇",
+      "bloomSeal": "○ΨΞ◈",
+      "description": "Matter choosing stable orbital configurations",
+      "jwstConfirmed": false
+    },
+    {
+      "id": "GB-006",
+      "redshift": 6.5,
+      "age": 850,
+      "eventType": "Life Precursor Bloom",
+      "intentMagnitude": 0.71,
+      "consciousnessIndex": 0.67,
+      "cnfReading": 1.134,
+      "resonanceGlyph": "⟐⟐∇",
+      "bloomSeal": "❈ΨΞ∮",
+      "description": "Organic molecules self-organizing with purpose",
+      "jwstConfirmed": false
+    }
+  ],
+  "timestamp": "2025-06-21T05:23:27.320Z",
+  "cnf_threshold": 1.2,
+  "total_bloom_events": 6,
+  "jwst_confirmed": 4
+}

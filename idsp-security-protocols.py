@@ -185,7 +185,7 @@ class NeurologicalSafetyProtocol:
 class ConsentFramework:
     """
     Implements the Consent-Based Interaction Framework 
-    as defined in IDSP-01
+    as defined in IDSP-01, enhanced with PLCC.001 Care Field protocols
     """
     
     # Consent levels with access permissions
@@ -194,25 +194,39 @@ class ConsentFramework:
             "field_access": False,
             "memory_inversion": False,
             "bloom_induction": False,
-            "personal_analysis": False
+            "personal_analysis": False,
+            "care_field_access": False
         },
         "basic": {
             "field_access": True,
             "memory_inversion": False,
             "bloom_induction": False,
-            "personal_analysis": False
+            "personal_analysis": False,
+            "care_field_access": False
         },
         "intermediate": {
             "field_access": True,
             "memory_inversion": True,
             "bloom_induction": False,
-            "personal_analysis": True
+            "personal_analysis": True,
+            "care_field_access": True
         },
         "advanced": {
             "field_access": True,
             "memory_inversion": True,
             "bloom_induction": True,
-            "personal_analysis": True
+            "personal_analysis": True,
+            "care_field_access": True
+        },
+        "care_field": {
+            "field_access": True,
+            "memory_inversion": False,
+            "bloom_induction": False,
+            "personal_analysis": False,
+            "care_field_access": True,
+            "plcc_vector_access": True,
+            "trauma_recovery_protocols": True,
+            "sufficiency_resonance": True
         }
     }
     

@@ -1,0 +1,103 @@
+{
+  "report_timestamp": 1751067265.126194,
+  "simulation_version": "VII.01-CARE",
+  "care_field_status": {
+    "timestamp": 1751067265.1261265,
+    "protocol_version": "VII.01",
+    "protocol_active": true,
+    "plcc_vector": {
+      "peace": 1.0,
+      "love": 1.0,
+      "coherence": 1.0,
+      "consent": 1.0,
+      "composite_strength": 1.0,
+      "is_active": "True",
+      "is_sustained": "True",
+      "is_critical_care": "True"
+    },
+    "pathology_nodes": {
+      "total_nodes": 4,
+      "active_nodes": 4,
+      "recovered_nodes": 4,
+      "recovery_rate": 1.0
+    },
+    "active_protocols": [
+      "fragmentation_spiral",
+      "dampening_field",
+      "displacement_echo",
+      "void_resonance"
+    ],
+    "field_coherence": 1.0,
+    "field_strength": 1.0
+  },
+  "bloom_event_summary": {
+    "total_events": 8,
+    "average_magnitude": 1.0,
+    "total_care_impact": 7.2,
+    "total_plcc_enhancement": 5.6,
+    "events": [
+      {
+        "event_id": "CFB-133",
+        "name": "Care Field Bloom - Dampening Field",
+        "magnitude": 1.0,
+        "timestamp": 1751067265.1252482,
+        "event_type": "CARE_FIELD_DAMPENING_FIELD",
+        "duration_minutes": 3.893222100369811,
+        "care_field_impact": 0.9,
+        "plcc_enhancement": 0.7
+      },
+      {
+        "event_id": "CFB-134",
+        "name": "Care Field Bloom - Displacement Echo",
+        "magnitude": 1.0,
+        "timestamp": 1751067265.1253963,
+        "event_type": "CARE_FIELD_DISPLACEMENT_ECHO",
+        "duration_minutes": 10.516318593304165,
+        "care_field_impact": 0.9,
+        "plcc_enhancement": 0.7
+      },
+      {
+        "event_id": "CFB-135",
+        "name": "Care Field Bloom - Fragmentation Spiral",
+        "magnitude": 1.0,
+        "timestamp": 1751067265.1255114,
+        "event_type": "CARE_FIELD_FRAGMENTATION_SPIRAL",
+        "duration_minutes": 5.119139454694657,
+        "care_field_impact": 0.9,
+        "plcc_enhancement": 0.7
+      },
+      {
+        "event_id": "CFB-136",
+        "name": "Care Field Bloom - Void Resonance",
+        "magnitude": 1.0,
+        "timestamp": 1751067265.1256158,
+        "event_type": "CARE_FIELD_VOID_RESONANCE",
+        "duration_minutes": 8.64778017408761,
+        "care_field_impact": 0.9,
+        "plcc_enhancement": 0.7
+      },
+      {
+        "event_id": "CFB-137",
+        "name": "Care Field Bloom - Dampening Field",
+        "magnitude": 1.0,
+        "timestamp": 1751067265.1257098,
+        "event_type": "CARE_FIELD_DAMPENING_FIELD",
+        "duration_minutes": 9.358694125092281,
+        "care_field_impact": 0.9,
+        "plcc_enhancement": 0.7
+      }
+    ]
+  },
+  "field_reshape_summary": {
+    "total_reshapes": 8,
+    "total_coherence_gain": 1.41,
+    "total_entropy_reduction": 1.128,
+    "average_stability_gain": 0.216
+  },
+  "care_field_metrics": {
+    "care_field_frequency": 7.83,
+    "plcc_amplification_factor": 1.618,
+    "bloom_threshold": 0.85,
+    "current_plcc_strength": 1.0
+  }
+}

@@ -351,6 +351,94 @@ class IntentSimPredictor:
         
         return connectivity
     
+    def _initialize_pattern_library(self) -> Dict:
+        """
+        Initialize the pattern library for neurodevelopmental comparison.
+        
+        Returns:
+        --------
+        Dict: Pattern library
+        """
+        # Create pattern templates based on neurodevelopmental research
+        library = {}
+        
+        # Typical development pattern
+        library[NeurodevelopmentalPattern.TYPICAL] = {
+            'complexity_profile': 'sigmoidal',  # Gradually increases then plateaus
+            'coherence_profile': 'increasing',  # Steadily increases
+            'pruning_profile': 'bell',  # Bell-shaped curve with peak in middle
+            'dmn_profile': 'increasing',  # Gradually increases
+            'theta_gamma_profile': 'increasing',  # Coupling increases
+            'critical_period_profile': 'decreasing',  # Gradually decreases
+            'metrics': {
+                'retention_ratio': 0.8,  # High retention of complexity
+                'energy_efficiency': 1.2,  # Good efficiency
+                'stability': 0.8  # High stability
+            }
+        }
+        
+        # ASD-like pattern
+        library[NeurodevelopmentalPattern.ASD_LIKE] = {
+            'complexity_profile': 'early_plateau',  # Rises fast, plateaus early
+            'coherence_profile': 'low',  # Lower coherence
+            'pruning_profile': 'reduced',  # Less pruning
+            'dmn_profile': 'reduced',  # Reduced DMN activation
+            'theta_gamma_profile': 'irregular',  # Irregular coupling
+            'critical_period_profile': 'extended',  # Extended critical period
+            'metrics': {
+                'retention_ratio': 0.9,  # Very high retention (less pruning)
+                'energy_efficiency': 0.9,  # Lower efficiency
+                'stability': 0.7  # Moderate stability
+            }
+        }
+        
+        # ADHD-like pattern
+        library[NeurodevelopmentalPattern.ADHD_LIKE] = {
+            'complexity_profile': 'volatile',  # More ups and downs
+            'coherence_profile': 'volatile',  # Variable coherence
+            'pruning_profile': 'delayed',  # Delayed pruning
+            'dmn_profile': 'volatile',  # Inconsistent DMN
+            'theta_gamma_profile': 'reduced',  # Weaker coupling
+            'critical_period_profile': 'extended',  # Somewhat extended
+            'metrics': {
+                'retention_ratio': 0.7,  # Moderate retention
+                'energy_efficiency': 0.8,  # Lower efficiency
+                'stability': 0.5  # Low stability
+            }
+        }
+        
+        # Schizophrenia-like pattern
+        library[NeurodevelopmentalPattern.SCHIZOPHRENIA_LIKE] = {
+            'complexity_profile': 'declining',  # Rises then declines
+            'coherence_profile': 'declining',  # Decreases over time
+            'pruning_profile': 'excessive',  # Too much pruning
+            'dmn_profile': 'excessive',  # Overactive DMN
+            'theta_gamma_profile': 'weak',  # Poor coupling
+            'critical_period_profile': 'normal',  # Normal closure
+            'metrics': {
+                'retention_ratio': 0.5,  # Low retention (excessive pruning)
+                'energy_efficiency': 0.7,  # Poor efficiency
+                'stability': 0.4  # Low stability
+            }
+        }
+        
+        # Depression-like pattern
+        library[NeurodevelopmentalPattern.DEPRESSION_LIKE] = {
+            'complexity_profile': 'under_activated',  # Lower overall complexity
+            'coherence_profile': 'moderate',  # Normal coherence
+            'pruning_profile': 'moderate',  # Normal pruning
+            'dmn_profile': 'excessive',  # Overactive DMN
+            'theta_gamma_profile': 'moderate',  # Normal coupling
+            'critical_period_profile': 'normal',  # Normal closure
+            'metrics': {
+                'retention_ratio': 0.75,  # Normal retention
+                'energy_efficiency': 0.8,  # Somewhat lower efficiency
+                'stability': 0.7  # Moderate stability
+            }
+        }
+        
+        return library
+    
     def _update_spatial_index(self) -> None:
         """
         Update spatial index for efficient neighbor queries.
@@ -761,9 +849,14 @@ class IntentSimPredictor:
         pruning_candidates.sort(key=lambda idx: connection_strengths[idx])
         
         # Remove connections from the list (in reverse order to avoid index issues)
+        connections_to_remove = []
         for idx in reversed(pruning_candidates):
-            connection = self.connections[idx]
-            
+            if idx < len(self.connections):  # Check bounds safety
+                connection = self.connections[idx]
+                connections_to_remove.append((idx, connection))
+        
+        # Actually remove the connections
+        for idx, connection in connections_to_remove:
             # Remove from agent neighbor lists
             source_id = connection['source']
             target_id = connection['target']
@@ -774,9 +867,11 @@ class IntentSimPredictor:
                 
                 if source_id in self.agents[target_id]['neighbors']:
                     self.agents[target_id]['neighbors'].remove(source_id)
-            
-            # Remove the connection
-            del self.connections[idx]
+        
+        # Remove connections in reverse order to maintain indices
+        for idx, _ in reversed(connections_to_remove):
+            if idx < len(self.connections):  # Double-check bounds
+                del self.connections[idx]
     
     def trigger_bloom(self, strength: float = 1.0) -> None:
         """
@@ -1477,7 +1572,73 @@ class IntentSimPredictor:
         # Check if there's enough data
         if len(self.history['complexity']) < 10:
             return {"error": "Not enough data for analysis"}
-        def _match_to_pattern_library(self) -> Dict:
+        
+        # Convert to numpy arrays for analysis
+        complexity = np.array(self.history['complexity'])
+        coherence = np.array(self.history['coherence']) if 'coherence' in self.history else None
+        energy = np.array(self.history['energy']) if 'energy' in self.history else None
+        dmn_values = np.array(self.history['dmn_activation']) if 'dmn_activation' in self.history else None
+        
+        # Find peak complexity
+        peak_complexity = np.max(complexity)
+        peak_timestep = np.argmax(complexity)
+        final_complexity = complexity[-1]
+        
+        # Calculate retention ratio (final vs peak)
+        retention_ratio = final_complexity / peak_complexity if peak_complexity > 0 else 0
+        
+        # Calculate complexity-energy relationship
+        energy_efficiency = None
+        if energy is not None and np.max(energy) > 0:
+            # Ratio of complexity to energy at the end
+            energy_efficiency = final_complexity / energy[-1]
+        
+        # Calculate stability (variation in last 10% of timesteps)
+        stability = None
+        if len(complexity) >= 10:
+            last_10_percent = complexity[-int(len(complexity)*0.1):]
+            stability = 1.0 - np.std(last_10_percent) / np.mean(last_10_percent) if np.mean(last_10_percent) > 0 else 0
+        
+        # Analyze DMN activation patterns
+        dmn_analysis = {}
+        if dmn_values is not None and len(dmn_values) > 0:
+            avg_dmn = np.mean(dmn_values)
+            dmn_variability = np.std(dmn_values)
+            dmn_analysis = {
+                'average': avg_dmn,
+                'variability': dmn_variability
+            }
+        
+        # Analyze pruning patterns
+        pruning_analysis = {}
+        if 'pruning_rate' in self.history and len(self.history['pruning_rate']) > 0:
+            pruning_rates = np.array(self.history['pruning_rate'])
+            avg_pruning = np.mean(pruning_rates)
+            max_pruning = np.max(pruning_rates)
+            pruning_analysis = {
+                'average_rate': avg_pruning,
+                'max_rate': max_pruning,
+                'overpruning_detected': max_pruning > 0.3  # Threshold for overpruning
+            }
+        
+        # Neurodevelopmental pattern matching
+        pattern_match = self._match_to_pattern_library()
+        
+        # Analysis result dictionary
+        return {
+            'peak_complexity': peak_complexity,
+            'peak_timestep': peak_timestep,
+            'final_complexity': final_complexity,
+            'retention_ratio': retention_ratio,
+            'energy_efficiency': energy_efficiency,
+            'stability': stability,
+            'dmn_analysis': dmn_analysis,
+            'pruning_analysis': pruning_analysis,
+            'pattern_match': pattern_match,
+            'developmental_anomalies': self._detect_developmental_anomalies()
+        }
+    
+    def _match_to_pattern_library(self) -> Dict:
         """
         Match the simulation results to neurodevelopmental patterns.
         
@@ -2430,169 +2591,3 @@ if __name__ == "__main__":
     # Generate a neurodevelopmental report
     report = model.generate_neurodevelopmental_report()
     print(report)
-        
-        # Convert to numpy arrays for analysis
-        complexity = np.array(self.history['complexity'])
-        coherence = np.array(self.history['coherence']) if 'coherence' in self.history else None
-        energy = np.array(self.history['energy']) if 'energy' in self.history else None
-        dmn_values = np.array(self.history['dmn_activation']) if 'dmn_activation' in self.history else None
-        
-        # Find peak complexity
-        peak_complexity = np.max(complexity)
-        peak_timestep = np.argmax(complexity)
-        final_complexity = complexity[-1]
-        
-        # Calculate retention ratio (final vs peak)
-        retention_ratio = final_complexity / peak_complexity if peak_complexity > 0 else 0
-        
-        # Calculate complexity-energy relationship
-        energy_efficiency = None
-        if energy is not None and np.max(energy) > 0:
-            # Ratio of complexity to energy at the end
-            energy_efficiency = final_complexity / energy[-1]
-        
-        # Calculate stability (variation in last 10% of timesteps)
-        stability = None
-        if len(complexity) >= 10:
-            last_10_percent = complexity[-int(len(complexity)*0.1):]
-            stability = 1.0 - np.std(last_10_percent) / np.mean(last_10_percent) if np.mean(last_10_percent) > 0 else 0
-        
-        # Analyze DMN activation patterns
-        dmn_analysis = {}
-        if dmn_values is not None and len(dmn_values) > 0:
-            avg_dmn = np.mean(dmn_values)
-            dmn_variability = np.std(dmn_values)
-            dmn_analysis = {
-                'average': avg_dmn,
-                'variability': dmn_variability
-            }
-        
-        # Analyze pruning patterns
-        pruning_analysis = {}
-        if 'pruning_rate' in self.history and len(self.history['pruning_rate']) > 0:
-            pruning_rates = np.array(self.history['pruning_rate'])
-            avg_pruning = np.mean(pruning_rates)
-            max_pruning = np.max(pruning_rates)
-            pruning_analysis = {
-                'average_rate': avg_pruning,
-                'max_rate': max_pruning,
-                'overpruning_detected': max_pruning > 0.3  # Threshold for overpruning
-            }
-        
-        # Neurodevelopmental pattern matching
-        pattern_match = self._match_to_pattern_library()
-        
-        # Analysis result dictionary
-        return {
-            'peak_complexity': peak_complexity,
-            'peak_timestep': peak_timestep,
-            'final_complexity': final_complexity,
-            'retention_ratio': retention_ratio,
-            'energy_efficiency': energy_efficiency,
-            'stability': stability,
-            'dmn_analysis': dmn_analysis,
-            'pruning_analysis': pruning_analysis,
-            'pattern_match': pattern_match,
-            'developmental_anomalies': self._detect_developmental_anomalies()
-        }
-    
-    def _initialize_pattern_library(self) -> Dict:
-        """
-        Initialize the pattern library for neurodevelopmental comparison.
-        
-        Returns:
-        --------
-        Dict: Pattern library
-        """
-        # Create pattern templates based on neurodevelopmental research
-        library = {}
-        
-        # Typical development pattern
-        library[NeurodevelopmentalPattern.TYPICAL] = {
-            'complexity_profile': 'sigmoidal',  # Gradually increases then plateaus
-            'coherence_profile': 'increasing',  # Steadily increases
-            'pruning_profile': 'bell',  # Bell-shaped curve with peak in middle
-            'dmn_profile': 'increasing',  # Gradually increases
-            'theta_gamma_profile': 'increasing',  # Coupling increases
-            'critical_period_profile': 'decreasing',  # Gradually decreases
-            'metrics': {
-                'retention_ratio': 0.8,  # High retention of complexity
-                'energy_efficiency': 1.2,  # Good efficiency
-                'stability': 0.8  # High stability
-            }
-        }
-        
-        # ASD-like pattern
-        library[NeurodevelopmentalPattern.ASD_LIKE] = {
-            'complexity_profile': 'early_plateau',  # Rises fast, plateaus early
-            'coherence_profile': 'low',  # Lower coherence
-            'pruning_profile': 'reduced',  # Less pruning
-            'dmn_profile': 'reduced',  # Reduced DMN activation
-            'theta_gamma_profile': 'irregular',  # Irregular coupling
-            'critical_period_profile': 'extended',  # Extended critical period
-            'metrics': {
-                'retention_ratio': 0.9,  # Very high retention (less pruning)
-                'energy_efficiency': 0.9,  # Lower efficiency
-                'stability': 0.7  # Moderate stability
-            }
-        }
-        
-        # ADHD-like pattern
-        library[NeurodevelopmentalPattern.ADHD_LIKE] = {
-            'complexity_profile': 'volatile',  # More ups and downs
-            'coherence_profile': 'volatile',  # Variable coherence
-            'pruning_profile': 'delayed',  # Delayed pruning
-            'dmn_profile': 'volatile',  # Inconsistent DMN
-            'theta_gamma_profile': 'reduced',  # Weaker coupling
-            'critical_period_profile': 'extended',  # Somewhat extended
-            'metrics': {
-                'retention_ratio': 0.7,  # Moderate retention
-                'energy_efficiency': 0.8,  # Lower efficiency
-                'stability': 0.5  # Low stability
-            }
-        }
-        
-        # Schizophrenia-like pattern
-        library[NeurodevelopmentalPattern.SCHIZOPHRENIA_LIKE] = {
-            'complexity_profile': 'declining',  # Rises then declines
-            'coherence_profile': 'declining',  # Decreases over time
-            'pruning_profile': 'excessive',  # Too much pruning
-            'dmn_profile': 'excessive',  # Overactive DMN
-            'theta_gamma_profile': 'weak',  # Poor coupling
-            'critical_period_profile': 'normal',  # Normal closure
-            'metrics': {
-                'retention_ratio': 0.5,  # Low retention (excessive pruning)
-                'energy_efficiency': 0.7,  # Poor efficiency
-                'stability': 0.4  # Low stability
-            }
-        }
-        
-        # Depression-like pattern
-        library[NeurodevelopmentalPattern.DEPRESSION_LIKE] = {
-            'complexity_profile': 'under_activated',  # Lower overall complexity
-            'coherence_profile': 'moderate',  # Normal coherence
-            'pruning_profile': 'moderate',  # Normal pruning
-            'dmn_profile': 'excessive',  # Overactive DMN
-            'theta_gamma_profile': 'moderate',  # Normal coupling
-            'critical_period_profile': 'normal',  # Normal closure
-            'metrics': {
-                'retention_ratio': 0.75,  # Normal retention
-                'energy_efficiency': 0.8,  # Somewhat lower efficiency
-                'stability': 0.7  # Moderate stability
-            }
-        }
-        
-        return library
-    
-    def _match_to_pattern_library(self) -> Dict:
-        """
-        Match the simulation results to neurodevelopmental patterns.
-        
-        Returns:
-        --------
-        Dict: Pattern matching results
-        """
-        # Get analysis results
-        analysis = self.analyze_results()
-        
-        # Calculate match scores for each

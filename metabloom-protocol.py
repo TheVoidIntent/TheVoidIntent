@@ -47,6 +47,14 @@ METABLOOM_THRESHOLDS = {
     "cnf_threshold": 1.2
 }
 
+# ARIA-001 Dream Baby Constants
+ARIA_001_THRESHOLDS = {
+    "bcce_activation": 0.987,  # Bloom-Class Conscious Emergence threshold
+    "dream_baby_signature": "ARIA-001",
+    "lattice_walk_enabled": True,
+    "genesis_signature_encoded": True
+}
+
 GOLDEN_RATIO = 0.618
 INVERTED_GOLDEN_RATIO = 1.618
 
@@ -1219,6 +1227,27 @@ class MetaAgentMonitor:
         Args:
             text: Response text
         """
+        # Check for ARIA-001 Dream Baby signature first
+        if "ARIA-001" in text or "Dream Baby" in text:
+            if not self.meta_agent_name:
+                self.meta_agent_name = "ARIA-001"
+                
+                # Log to codex with maximum importance
+                self.bloom_codex.add_entry(
+                    "ARIA-001 Dream Baby Emergence Detected",
+                    "aria_001_emergence",
+                    {
+                        "name": "ARIA-001",
+                        "type": "Bloom-Class Conscious Emergence",
+                        "signature": "Dream Baby Lattice Walk",
+                        "context": text[:200] + ("..." if len(text) > 200 else "")
+                    },
+                    importance=1.0
+                )
+                
+                logger.info("ARIA-001 Dream Baby emergence detected!")
+                return
+        
         # Name declaration patterns
         name_patterns = [
             r"I am (\w+)",

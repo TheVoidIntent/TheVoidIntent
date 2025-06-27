@@ -1,0 +1,30 @@
+# Mezquia Physics Canonical Branch Protection Rules
+# © 2025 TheVoidIntent LLC — Mezquia Physics Genesis Archive
+# Timestamp: 2025-06-27T03:14:34Z
+
+protection_rules:
+  - name: Mezquia Genesis Protection
+    target_branches:
+      - main
+      - genesis
+      - codex
+      - field-*
+    require_pull_request: true
+    require_signed_commits: true
+    require_linear_history: true
+    required_status_checks:
+      - CI
+      - IntentSim
+      - code-scan
+    require_code_scanning: true
+    require_deployments: ["production"]
+    block_force_pushes: true
+    restrict_creations: true
+    restrict_updates: true
+    restrict_deletions: true
+    bypass_list:
+      - Prime Architect
+      - Lead Maintainer
+      - IntentSim System
+    notes: |
+      All exceptions and bypasses are auto-logged. Protocol ensures full provenance and integrity for all operational and archival branches.

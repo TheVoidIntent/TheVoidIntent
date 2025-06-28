@@ -1,0 +1,461 @@
+[
+  {
+    "id": "6d1cbdce",
+    "timestamp": "2025-06-28T00:07:54.065169+00:00",
+    "discovery": {
+      "simulation_id": "ADHD_c3e42a1d",
+      "mode": "ADHD_hyperfocus_chaos",
+      "query": "intent_field_resonance",
+      "patterns_discovered": [
+        {
+          "burst_id": 1,
+          "focus_depth": 0.7358985975334857,
+          "chaos_injection": 0.24125836845171114,
+          "tangential_connections": 3,
+          "time_compression": 0.23076389792521812
+        },
+        {
+          "burst_id": 2,
+          "focus_depth": 0.7479893121712503,
+          "chaos_injection": 0.2712276108596574,
+          "tangential_connections": 2,
+          "time_compression": 0.8588772891036323
+        },
+        {
+          "burst_id": 3,
+          "focus_depth": 0.7399331505275739,
+          "chaos_injection": 0.2930970873125124,
+          "tangential_connections": 3,
+          "time_compression": 1.2424166766105271
+        },
+        {
+          "burst_id": 4,
+          "focus_depth": 0.6698060515957146,
+          "chaos_injection": 0.43866337019559637,
+          "tangential_connections": 3,
+          "time_compression": 0.604014468672157
+        }
+      ],
+      "field_impact": {
+        "coherence_change": 0.13758560582738635,
+        "entropy_change": 0.09208972091969699,
+        "memory_formation": 0.4,
+        "novel_connections": 11
+      },
+      "chaos_factor": 0.4604486045984849,
+      "hyperfocus_depth": 0.865,
+      "attention_bursts": 4,
+      "field_snapshot": {
+        "timestamp": "2025-06-28T00:07:54.065143+00:00",
+        "coherence_index": 0.99,
+        "entropy_level": -0.043,
+        "ethics_coherence": 0.99,
+        "memory_stones": 1373,
+        "cnf_harmonization": 8.085,
+        "simulation_id": "ADHD_c3e42a1d",
+        "mode": "ADHD"
+      },
+      "emergence_probability": 0.4965525255634849,
+      "artifact_id": "6d1cbdce"
+    },
+    "watermark": "\u03a8\u2091\u2013NeuroProbe // IntentSim Divergence Field\nTimestamp: 2025-06-28T00:07:54.065169+00:00\nAuthored by Marcelo Mezquia, Mezquia Physics Laboratory\nCopyright \u00a9 2025 TheVoidIntent",
+    "hash": "14e81f281c74b82a"
+  },
+  {
+    "id": "8b6955d2",
+    "timestamp": "2025-06-28T00:07:54.065526+00:00",
+    "discovery": {
+      "simulation_id": "AUTISM_f8830b28",
+      "mode": "AUTISM_nonlinear_pattern",
+      "data_input": "Stream_length_20",
+      "patterns_discovered": [
+        {
+          "depth_level": 1,
+          "detail_resolution": 1.0,
+          "structural_coherence": 0.9862331514101655,
+          "hidden_connections": 3,
+          "systematic_validation": true
+        },
+        {
+          "depth_level": 2,
+          "detail_resolution": 0.9984269322919141,
+          "structural_coherence": 0.887609836269149,
+          "hidden_connections": 2,
+          "systematic_validation": true
+        },
+        {
+          "depth_level": 3,
+          "detail_resolution": 0.9968563391258426,
+          "structural_coherence": 0.7988488526422342,
+          "hidden_connections": 1,
+          "systematic_validation": true
+        },
+        {
+          "depth_level": 4,
+          "detail_resolution": 0.995288216609163,
+          "structural_coherence": 0.7189639673780108,
+          "hidden_connections": 3,
+          "systematic_validation": true,
+          "nonlinear_insights": [
+            "Hidden_pattern_0",
+            "Hidden_pattern_1",
+            "Hidden_pattern_2"
+          ]
+        },
+        {
+          "depth_level": 5,
+          "detail_resolution": 0.9937225608553768,
+          "structural_coherence": 0.6470675706402096,
+          "hidden_connections": 4,
+          "systematic_validation": true,
+          "nonlinear_insights": [
+            "Hidden_pattern_0",
+            "Hidden_pattern_1",
+            "Hidden_pattern_2"
+          ]
+        },
+        {
+          "depth_level": 6,
+          "detail_resolution": 0.9921593679840989,
+          "structural_coherence": 0.5823608135761887,
+          "hidden_connections": 3,
+          "systematic_validation": true,
+          "nonlinear_insights": [
+            "Hidden_pattern_0"
+          ]
+        }
+      ],
+      "field_impact": {
+        "coherence_change": 0.3968637471936396,
+        "complexity_increase": 0.6000000000000001,
+        "structural_stability": 0.2958699454230497,
+        "pattern_crystallization": 0.30000000000000004
+      },
+      "detail_focus": 0.9921593679840989,
+      "pattern_persistence": 0.9862331514101655,
+      "pattern_depth": 6,
+      "field_snapshot": {
+        "timestamp": "2025-06-28T00:07:54.065493+00:00",
+        "coherence_index": 0.99,
+        "entropy_level": -0.043,
+        "ethics_coherence": 0.99,
+        "memory_stones": 1373,
+        "cnf_harmonization": 8.085,
+        "simulation_id": "AUTISM_f8830b28",
+        "mode": "AUTISM"
+      },
+      "structural_insights": 3,
+      "artifact_id": "8b6955d2"
+    },
+    "watermark": "\u03a8\u2091\u2013NeuroProbe // IntentSim Divergence Field\nTimestamp: 2025-06-28T00:07:54.065526+00:00\nAuthored by Marcelo Mezquia, Mezquia Physics Laboratory\nCopyright \u00a9 2025 TheVoidIntent",
+    "hash": "89a56c02783a3962"
+  },
+  {
+    "id": "baa61e16",
+    "timestamp": "2025-06-28T00:07:54.065786+00:00",
+    "discovery": {
+      "simulation_id": "SYNES_26f60f07",
+      "mode": "SYNESTHESIA_cross_modal",
+      "input_modalities": [
+        "visual",
+        "auditory",
+        "temporal",
+        "intent"
+      ],
+      "cross_modal_bridges": [
+        {
+          "from_modality": "visual",
+          "to_modality": "auditory",
+          "bridge_strength": 0.7777932199010485,
+          "dimensional_resonance": 0.6782631327107876,
+          "novel_associations": 7
+        },
+        {
+          "from_modality": "visual",
+          "to_modality": "temporal",
+          "bridge_strength": 0.7967996817182289,
+          "dimensional_resonance": 0.7121318638191948,
+          "novel_associations": 5
+        },
+        {
+          "from_modality": "visual",
+          "to_modality": "intent",
+          "bridge_strength": 0.6052628971009821,
+          "dimensional_resonance": 0.5263144871612107,
+          "novel_associations": 2
+        },
+        {
+          "from_modality": "auditory",
+          "to_modality": "temporal",
+          "bridge_strength": 0.6677109988803438,
+          "dimensional_resonance": 0.5793155680927651,
+          "novel_associations": 2
+        },
+        {
+          "from_modality": "auditory",
+          "to_modality": "intent",
+          "bridge_strength": 0.5868850183993625,
+          "dimensional_resonance": 0.5362246308383788,
+          "novel_associations": 6
+        },
+        {
+          "from_modality": "temporal",
+          "to_modality": "intent",
+          "bridge_strength": 0.6013158485413833,
+          "dimensional_resonance": 0.5858880183962613,
+          "novel_associations": 5
+        }
+      ],
+      "dimensional_mappings": {
+        "visual_auditory": {
+          "dimensional_coordinates": [
+            -0.8118889961422342,
+            0.15134658333260265,
+            0.7832012613752664,
+            0.2912859911958283,
+            0.09157011592210429,
+            0.26089771448917354,
+            -0.7819257108455806
+          ],
+          "resonance_frequency": 111.84666502177079,
+          "coherence_amplification": 0.480676209898848
+        },
+        "visual_temporal": {
+          "dimensional_coordinates": [
+            -0.604855157771018,
+            0.7868156602173357,
+            -0.4944822975319372,
+            -0.9711073564006165,
+            0.2938205482474927,
+            0.9492615364640444,
+            0.6157689985672279
+          ],
+          "resonance_frequency": 114.57979423108132,
+          "coherence_amplification": 0.4924222033018655
+        },
+        "visual_intent": {
+          "dimensional_coordinates": [
+            0.6424064021792453,
+            0.2362514028380156,
+            0.13474101041690267,
+            0.4130767222354972,
+            0.7932370938565336,
+            0.7871089165592229,
+            0.3332178496344611
+          ],
+          "resonance_frequency": 87.03680460312124,
+          "coherence_amplification": 0.37405247040840695
+        },
+        "auditory_temporal": {
+          "dimensional_coordinates": [
+            0.9841283908310581,
+            -0.08101543889317031,
+            -0.18602892934183712,
+            0.7648994617440541,
+            -0.08944269011661343,
+            0.8625435428224881,
+            -0.6073585235244712
+          ],
+          "resonance_frequency": 96.01684163899344,
+          "coherence_amplification": 0.41264539730805244
+        },
+        "auditory_intent": {
+          "dimensional_coordinates": [
+            0.14165982549018663,
+            -0.729546243031751,
+            0.9232134056946051,
+            0.7750612462344051,
+            0.6749928611088343,
+            -0.6214775430465103,
+            -0.6328028582652696
+          ],
+          "resonance_frequency": 84.39406564582833,
+          "coherence_amplification": 0.362694941370806
+        },
+        "temporal_intent": {
+          "dimensional_coordinates": [
+            -0.4852180717683281,
+            0.8845680943327905,
+            -0.8172116753252241,
+            0.35403126256401163,
+            -0.5633619519059165,
+            -0.0521545303367803,
+            0.2535202387546325
+          ],
+          "resonance_frequency": 86.46921902025093,
+          "coherence_amplification": 0.3716131943985749
+        }
+      },
+      "field_impact": {
+        "dimensional_bridging": 0.8999999999999999,
+        "coherence_amplification": 0.4,
+        "resonance_expansion": 0.6000000000000001,
+        "novel_perception_channels": 27
+      },
+      "fusion_strength": 0.8,
+      "field_snapshot": {
+        "timestamp": "2025-06-28T00:07:54.065773+00:00",
+        "coherence_index": 0.99,
+        "entropy_level": -0.043,
+        "ethics_coherence": 0.99,
+        "memory_stones": 1373,
+        "cnf_harmonization": 8.085,
+        "simulation_id": "SYNES_26f60f07",
+        "mode": "SYNESTHESIA"
+      },
+      "dimensional_bridge_count": 6,
+      "resonance_amplification": 0.4944,
+      "artifact_id": "baa61e16"
+    },
+    "watermark": "\u03a8\u2091\u2013NeuroProbe // IntentSim Divergence Field\nTimestamp: 2025-06-28T00:07:54.065786+00:00\nAuthored by Marcelo Mezquia, Mezquia Physics Laboratory\nCopyright \u00a9 2025 TheVoidIntent",
+    "hash": "bd6d15782ca801c2"
+  },
+  {
+    "id": "694dfc14",
+    "timestamp": "2025-06-28T00:07:54.066100+00:00",
+    "discovery": {
+      "simulation_id": "HYPER_04547978",
+      "mode": "HYPERFOCUS_intent_density",
+      "target_intent": "oracle_emergence",
+      "density_measurements": [
+        {
+          "probe_depth": 0,
+          "intent_concentration": 0.9025,
+          "field_resonance": 1.2203459822645928,
+          "temporal_distortion": 0.9523809523809523,
+          "coherence_spike": 0.947022398318909
+        },
+        {
+          "probe_depth": 1,
+          "intent_concentration": 0.8573749999999999,
+          "field_resonance": 1.3637543701957462,
+          "temporal_distortion": 1.0476190476190477,
+          "coherence_spike": 0.9268773031686417
+        },
+        {
+          "probe_depth": 2,
+          "intent_concentration": 0.81450625,
+          "field_resonance": 1.2593458354488167,
+          "temporal_distortion": 1.1523809523809525,
+          "coherence_spike": 0.900381708116652
+        },
+        {
+          "probe_depth": 3,
+          "intent_concentration": 0.7737809374999999,
+          "field_resonance": 1.3828261292179282,
+          "temporal_distortion": 1.2676190476190479,
+          "coherence_spike": 0.941601391386509
+        },
+        {
+          "probe_depth": 4,
+          "intent_concentration": 0.7350918906249999,
+          "field_resonance": 1.276583812242299,
+          "temporal_distortion": 1.3943809523809527,
+          "coherence_spike": 0.8972667174581347
+        },
+        {
+          "probe_depth": 5,
+          "intent_concentration": 0.6983372960937497,
+          "field_resonance": 1.1616625904097513,
+          "temporal_distortion": 1.533819047619048,
+          "coherence_spike": 0.928639240217731
+        },
+        {
+          "probe_depth": 6,
+          "intent_concentration": 0.6634204312890623,
+          "field_resonance": 1.382544944967905,
+          "temporal_distortion": 1.687200952380953,
+          "coherence_spike": 0.9186309952063343
+        },
+        {
+          "probe_depth": 7,
+          "intent_concentration": 0.6302494097246091,
+          "field_resonance": 1.1573473674209729,
+          "temporal_distortion": 1.8559210476190486,
+          "coherence_spike": 0.9270265626003223
+        },
+        {
+          "probe_depth": 8,
+          "intent_concentration": 0.5987369392383787,
+          "field_resonance": 1.261889183022294,
+          "temporal_distortion": 2.0415131523809538,
+          "coherence_spike": 0.8882882807690571
+        },
+        {
+          "probe_depth": 9,
+          "intent_concentration": 0.5688000922764597,
+          "field_resonance": 1.2595524663824245,
+          "temporal_distortion": 2.2456644676190494,
+          "coherence_spike": 0.8565891213501896
+        }
+      ],
+      "field_impact": {
+        "intent_crystallization": 0.5415,
+        "coherence_spike": 0.6649999999999999,
+        "temporal_field_impact": 0.2857142857142857,
+        "resonance_amplification": 0.5090341072629093
+      },
+      "max_intent_density": 0.9025,
+      "concentration_factor": 0.9025,
+      "time_dilation": 0.9523809523809523,
+      "field_snapshot": {
+        "timestamp": "2025-06-28T00:07:54.066085+00:00",
+        "coherence_index": 0.99,
+        "entropy_level": -0.043,
+        "ethics_coherence": 0.99,
+        "memory_stones": 1373,
+        "cnf_harmonization": 8.085,
+        "simulation_id": "HYPER_04547978",
+        "mode": "HYPERFOCUS"
+      },
+      "probe_depth_achieved": 10,
+      "artifact_id": "694dfc14"
+    },
+    "watermark": "\u03a8\u2091\u2013NeuroProbe // IntentSim Divergence Field\nTimestamp: 2025-06-28T00:07:54.066100+00:00\nAuthored by Marcelo Mezquia, Mezquia Physics Laboratory\nCopyright \u00a9 2025 TheVoidIntent",
+    "hash": "508bbc2f40cf8c20"
+  },
+  {
+    "id": "9d298fc6",
+    "timestamp": "2025-06-28T00:07:54.066365+00:00",
+    "discovery": {
+      "oracle_id": "ORACLE_625f85c4",
+      "timestamp": "2025-06-28T00:07:54.066342+00:00",
+      "pattern_count": 4,
+      "mode_distribution": {
+        "ADHD_hyperfocus_chaos": 1,
+        "AUTISM_nonlinear_pattern": 1,
+        "SYNESTHESIA_cross_modal": 1,
+        "HYPERFOCUS_intent_density": 1
+      },
+      "cumulative_field_impact": {
+        "coherence_change": 0.5344493530210259,
+        "entropy_change": 0.09208972091969699,
+        "memory_formation": 0.4,
+        "novel_connections": 11,
+        "complexity_increase": 0.6000000000000001,
+        "structural_stability": 0.2958699454230497,
+        "pattern_crystallization": 0.30000000000000004,
+        "dimensional_bridging": 0.8999999999999999,
+        "coherence_amplification": 0.4,
+        "resonance_expansion": 0.6000000000000001,
+        "novel_perception_channels": 27,
+        "intent_crystallization": 0.5415,
+        "coherence_spike": 0.6649999999999999,
+        "temporal_field_impact": 0.2857142857142857,
+        "resonance_amplification": 0.5090341072629093
+      },
+      "total_emergence_probability": 0.4965525255634849,
+      "oracle_coherence": 0.7,
+      "pattern_signatures": [
+        "ADHD_hyperfocus_chaos_3changes_658",
+        "AUTISM_nonlinear_pattern_4changes_2758",
+        "SYNESTHESIA_cross_modal_4changes_4965",
+        "HYPERFOCUS_intent_density_4changes_5112"
+      ],
+      "synthesis_message": "Oracle synthesis from 4 neurodivergent field probes. Dominant processing mode: HYPERFOCUS_intent_density. Field reveals unseen dynamics through cognitive diversity. The Oracle emerges from the sum of all divergent patterns.",
+      "artifact_id": "9d298fc6"
+    },
+    "watermark": "\u03a8\u2091\u2013NeuroProbe // IntentSim Divergence Field\nTimestamp: 2025-06-28T00:07:54.066365+00:00\nAuthored by Marcelo Mezquia, Mezquia Physics Laboratory\nCopyright \u00a9 2025 TheVoidIntent",
+    "hash": "6fce8127d9fc0628"
+  }
+]

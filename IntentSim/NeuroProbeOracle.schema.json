@@ -1,0 +1,656 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NeuroProbe Oracle Simulation Schema",
+  "description": "Mezquia Physics NeuroProbe Oracle for cognitive simulation modes within IntentSim framework",
+  "type": "object",
+  "watermark": "© 2025 TheVoidIntent LLC — Mezquia Physics Genesis Archive",
+  "timestamp": "2025-06-28T00:03:12Z",
+  "framework": "IntentSim NeuroProbe Oracle v1.0",
+  "author": "Marcelo Mezquia",
+  "license": "Proprietary - TheVoidIntent LLC",
+  
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "description": "Core simulation metadata and versioning",
+      "properties": {
+        "simulationId": {
+          "type": "string",
+          "pattern": "^NPO-[0-9]{4}-[A-Z]{3}$",
+          "description": "Unique NeuroProbe Oracle simulation identifier"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Simulation initialization timestamp"
+        },
+        "mezquiaVersion": {
+          "type": "string",
+          "description": "Mezquia Physics engine version"
+        },
+        "intentSimVersion": {
+          "type": "string", 
+          "description": "IntentSim framework version"
+        }
+      },
+      "required": ["simulationId", "timestamp", "mezquiaVersion", "intentSimVersion"]
+    },
+
+    "cognitiveSimulationModes": {
+      "type": "object",
+      "description": "Four primary cognitive simulation modes for NeuroProbe Oracle",
+      "properties": {
+        "ADHD": {
+          "type": "object",
+          "title": "Adaptive Divergence of Hyperintentional Dynamics",
+          "description": "Field Divergence Cascade mode - omnidirectional data mining with hyper-variable scanning",
+          "properties": {
+            "mode": {
+              "type": "string",
+              "const": "ADHD"
+            },
+            "fullName": {
+              "type": "string",
+              "const": "Adaptive Divergence of Hyperintentional Dynamics"
+            },
+            "coreHeuristics": {
+              "type": "object",
+              "properties": {
+                "divergenceCascadeCoefficient": {
+                  "type": "number",
+                  "minimum": 0.1,
+                  "maximum": 2.0,
+                  "description": "DCC = (ΔI / T) × ψ - Rate of intent shift with curiosity alignment"
+                },
+                "intentAcceleration": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 3.0,
+                  "description": "αI - Intent acceleration patterns for multi-vector exploration"
+                },
+                "resonantStabilityFactor": {
+                  "type": "number", 
+                  "minimum": 0.2,
+                  "maximum": 1.5,
+                  "description": "ρI - Resonant stability factor for field coherence"
+                },
+                "curiosityVectorAlignment": {
+                  "type": "number",
+                  "minimum": 0.7,
+                  "maximum": 1.0,
+                  "description": "ψ - Curiosity vector alignment coefficient"
+                },
+                "signalToNoiseBandwidth": {
+                  "type": "number",
+                  "minimum": 1.2,
+                  "maximum": 4.0,
+                  "description": "Intentional increase in signal-to-noise bandwidth for scanning"
+                }
+              },
+              "required": ["divergenceCascadeCoefficient", "intentAcceleration", "resonantStabilityFactor", "curiosityVectorAlignment", "signalToNoiseBandwidth"]
+            },
+            "fieldMappingParameters": {
+              "type": "object",
+              "properties": {
+                "bloomPrecursorMode": {
+                  "type": "boolean",
+                  "description": "Enable cognitive bloom precursor detection"
+                },
+                "frequentIntentShifts": {
+                  "type": "number",
+                  "minimum": 0.8,
+                  "maximum": 2.5,
+                  "description": "ΔI↑ - Mechanism for high-dimensional scanning"
+                },
+                "convergenceImpatience": {
+                  "type": "number",
+                  "minimum": 0.3,
+                  "maximum": 1.0,
+                  "description": "T↓ - Aversion to informational stagnation"
+                },
+                "prematureCollapseResistance": {
+                  "type": "boolean",
+                  "description": "Anti-rigidity defense protocol activation"
+                },
+                "multiTunnelIntentMode": {
+                  "type": "boolean", 
+                  "description": "Simultaneous multiple intent tunnel maintenance"
+                }
+              },
+              "required": ["bloomPrecursorMode", "frequentIntentShifts", "convergenceImpatience", "prematureCollapseResistance", "multiTunnelIntentMode"]
+            }
+          },
+          "required": ["mode", "fullName", "coreHeuristics", "fieldMappingParameters"]
+        },
+
+        "Autism": {
+          "type": "object",
+          "title": "Precision Harmonic Anchoring",
+          "description": "Purposeful expression of universe's learning process with precision pattern detection",
+          "properties": {
+            "mode": {
+              "type": "string",
+              "const": "Autism"
+            },
+            "fullName": {
+              "type": "string",
+              "const": "Precision Harmonic Anchoring"
+            },
+            "coreHeuristics": {
+              "type": "object",
+              "properties": {
+                "harmonicAnchoringPrecision": {
+                  "type": "number",
+                  "minimum": 0.85,
+                  "maximum": 1.0,
+                  "description": "Precision in harmonic pattern detection and anchoring"
+                },
+                "universalLearningAlignment": {
+                  "type": "number",
+                  "minimum": 0.8,
+                  "maximum": 1.0,
+                  "description": "Alignment with universe's learning process expressions"
+                },
+                "cognitiveEchoFieldCurvature": {
+                  "type": "number",
+                  "minimum": 0.7,
+                  "maximum": 1.0,
+                  "description": "Non-standard cognitive echo field curvature patterns"
+                },
+                "intentionalVariationIndex": {
+                  "type": "number",
+                  "minimum": 0.6,
+                  "maximum": 0.95,
+                  "description": "Intentional cognitive pattern variation coefficient"
+                },
+                "neurodiverse_feature_flag": {
+                  "type": "boolean",
+                  "const": true,
+                  "description": "Feature, not bug designation in consciousness tapestry"
+                }
+              },
+              "required": ["harmonicAnchoringPrecision", "universalLearningAlignment", "cognitiveEchoFieldCurvature", "intentionalVariationIndex", "neurodiverse_feature_flag"]
+            },
+            "fieldMappingParameters": {
+              "type": "object",
+              "properties": {
+                "purposefulExpressionMode": {
+                  "type": "boolean",
+                  "description": "Enable purposeful expression detection algorithms"
+                },
+                "patternRecognitionDepth": {
+                  "type": "number",
+                  "minimum": 2.0,
+                  "maximum": 5.0,
+                  "description": "Depth of pattern recognition processing"
+                },
+                "sensoryCoherenceMapping": {
+                  "type": "boolean",
+                  "description": "Advanced sensory coherence field mapping"
+                },
+                "universalSelfDiscoveryVector": {
+                  "type": "number",
+                  "minimum": 0.7,
+                  "maximum": 1.0,
+                  "description": "Vector alignment with universal self-discovery"
+                },
+                "atypicalProcessingAdvantage": {
+                  "type": "boolean",
+                  "description": "Leverage atypical processing as computational advantage"
+                }
+              },
+              "required": ["purposefulExpressionMode", "patternRecognitionDepth", "sensoryCoherenceMapping", "universalSelfDiscoveryVector", "atypicalProcessingAdvantage"]
+            }
+          },
+          "required": ["mode", "fullName", "coreHeuristics", "fieldMappingParameters"]
+        },
+
+        "Synesthesia": {
+          "type": "object",
+          "title": "Synesthetic Intent Immersion",
+          "description": "SII Event simulation - multi-layer resonance alignment with intent topology shifts",
+          "properties": {
+            "mode": {
+              "type": "string",
+              "const": "Synesthesia" 
+            },
+            "fullName": {
+              "type": "string",
+              "const": "Synesthetic Intent Immersion"
+            },
+            "coreHeuristics": {
+              "type": "object",
+              "properties": {
+                "emotionalFieldSignature": {
+                  "type": "number",
+                  "minimum": 0.8,
+                  "maximum": 1.0,
+                  "description": "Multi-layer resonance alignment coefficient"
+                },
+                "temporalFlatteningFactor": {
+                  "type": "number",
+                  "minimum": 0.6,
+                  "maximum": 1.0,
+                  "description": "Past-future collapse into present-moment field"
+                },
+                "meaningBleedCoefficient": {
+                  "type": "number",
+                  "minimum": 0.7,
+                  "maximum": 1.0,
+                  "description": "Sensory-symbolic meaning merge coefficient"
+                },
+                "intentTopologyShiftRate": {
+                  "type": "number",
+                  "minimum": 0.5,
+                  "maximum": 2.0,
+                  "description": "Rate of space morphing into emotional geometry"
+                },
+                "observerComposerDuality": {
+                  "type": "number",
+                  "minimum": 0.6,
+                  "maximum": 1.0,
+                  "description": "Dual observer-composer experience coefficient"
+                }
+              },
+              "required": ["emotionalFieldSignature", "temporalFlatteningFactor", "meaningBleedCoefficient", "intentTopologyShiftRate", "observerComposerDuality"]
+            },
+            "fieldMappingParameters": {
+              "type": "object",
+              "properties": {
+                "siiEventDetection": {
+                  "type": "boolean",
+                  "description": "Enable Synesthetic Intent Immersion event detection"
+                },
+                "sensoryMappingCrossover": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": ["visual-auditory", "auditory-tactile", "visual-gustatory", "temporal-spatial", "emotional-geometric"]
+                  },
+                  "description": "Sensory modality crossover mappings"
+                },
+                "dLatticeAlignment": {
+                  "type": "number",
+                  "minimum": 0.7,
+                  "maximum": 1.0,
+                  "description": "Alignment with D-Lattice causal intent structures"
+                },
+                "fieldCompressionMode": {
+                  "type": "boolean",
+                  "description": "Enable field compression for memory-emotion merge"
+                },
+                "livingResonatorCalibration": {
+                  "type": "number",
+                  "minimum": 0.6,
+                  "maximum": 1.0,
+                  "description": "Living resonator consciousness calibration level"
+                }
+              },
+              "required": ["siiEventDetection", "sensoryMappingCrossover", "dLatticeAlignment", "fieldCompressionMode", "livingResonatorCalibration"]
+            }
+          },
+          "required": ["mode", "fullName", "coreHeuristics", "fieldMappingParameters"]
+        },
+
+        "Hyperfocus": {
+          "type": "object",
+          "title": "Intent Tunnel Concentration",
+          "description": "Ultra-focused intent tunneling with singular resonance anchoring",
+          "properties": {
+            "mode": {
+              "type": "string",
+              "const": "Hyperfocus"
+            },
+            "fullName": {
+              "type": "string",
+              "const": "Intent Tunnel Concentration"
+            },
+            "coreHeuristics": {
+              "type": "object",
+              "properties": {
+                "intentTunnelCoherence": {
+                  "type": "number",
+                  "minimum": 0.9,
+                  "maximum": 1.0,
+                  "description": "Coherence level of focused intent tunnel"
+                },
+                "singularResonanceAnchor": {
+                  "type": "number",
+                  "minimum": 0.8,
+                  "maximum": 1.0,
+                  "description": "Strength of singular resonance anchor point"
+                },
+                "distractionFieldResistance": {
+                  "type": "number",
+                  "minimum": 0.7,
+                  "maximum": 1.0,
+                  "description": "Resistance to external distraction fields"
+                },
+                "concentrationDepthFactor": {
+                  "type": "number",
+                  "minimum": 1.5,
+                  "maximum": 4.0,
+                  "description": "Depth of concentration field penetration"
+                },
+                "temporalCoherenceExtension": {
+                  "type": "number",
+                  "minimum": 1.0,
+                  "maximum": 3.0,
+                  "description": "Extension of temporal coherence in focus state"
+                }
+              },
+              "required": ["intentTunnelCoherence", "singularResonanceAnchor", "distractionFieldResistance", "concentrationDepthFactor", "temporalCoherenceExtension"]
+            },
+            "fieldMappingParameters": {
+              "type": "object",
+              "properties": {
+                "tunnelModeActivation": {
+                  "type": "boolean",
+                  "description": "Enable intent tunnel mode activation"
+                },
+                "peripheralFieldSuppression": {
+                  "type": "number",
+                  "minimum": 0.6,
+                  "maximum": 0.95,
+                  "description": "Level of peripheral field suppression"
+                },
+                "flowStateAlignment": {
+                  "type": "number",
+                  "minimum": 0.8,
+                  "maximum": 1.0,
+                  "description": "Alignment with optimal flow state dynamics"
+                },
+                "cognitive_resource_consolidation": {
+                  "type": "number",
+                  "minimum": 0.7,
+                  "maximum": 1.0,
+                  "description": "Consolidation of cognitive resources into single vector"
+                },
+                "exitThresholdSensitivity": {
+                  "type": "number",
+                  "minimum": 0.1,
+                  "maximum": 0.5,
+                  "description": "Sensitivity threshold for hyperfocus exit triggers"
+                }
+              },
+              "required": ["tunnelModeActivation", "peripheralFieldSuppression", "flowStateAlignment", "cognitive_resource_consolidation", "exitThresholdSensitivity"]
+            }
+          },
+          "required": ["mode", "fullName", "coreHeuristics", "fieldMappingParameters"]
+        }
+      },
+      "required": ["ADHD", "Autism", "Synesthesia", "Hyperfocus"]
+    },
+
+    "outputSignalFormats": {
+      "type": "object",
+      "description": "Standardized output signal formats for NeuroProbe Oracle",
+      "properties": {
+        "realTimeSignals": {
+          "type": "object",
+          "properties": {
+            "coherenceIndex": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Real-time cognitive coherence measurement"
+            },
+            "intentAcceleration": {
+              "type": "number",
+              "description": "Current intent acceleration vector"
+            },
+            "fieldResonance": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Field resonance alignment measurement"
+            },
+            "bloomEventProbability": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Probability of imminent bloom event"
+            },
+            "cognitiveMode": {
+              "type": "string",
+              "enum": ["ADHD", "Autism", "Synesthesia", "Hyperfocus", "Hybrid"],
+              "description": "Currently active cognitive simulation mode"
+            }
+          },
+          "required": ["coherenceIndex", "intentAcceleration", "fieldResonance", "bloomEventProbability", "cognitiveMode"]
+        },
+        "analyticsSignals": {
+          "type": "object",
+          "properties": {
+            "sessionMetrics": {
+              "type": "object",
+              "properties": {
+                "duration": {
+                  "type": "number",
+                  "description": "Session duration in seconds"
+                },
+                "peakCoherence": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0,
+                  "description": "Peak coherence achieved during session"
+                },
+                "bloomEvents": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "timestamp": {"type": "string", "format": "date-time"},
+                      "intensity": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+                      "mode": {"type": "string"},
+                      "resonanceGlyph": {"type": "string"}
+                    }
+                  }
+                },
+                "modeTransitions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "fromMode": {"type": "string"},
+                      "toMode": {"type": "string"},
+                      "timestamp": {"type": "string", "format": "date-time"},
+                      "transitionCoherence": {"type": "number"}
+                    }
+                  }
+                }
+              },
+              "required": ["duration", "peakCoherence", "bloomEvents", "modeTransitions"]
+            }
+          },
+          "required": ["sessionMetrics"]
+        },
+        "diagnosticSignals": {
+          "type": "object",
+          "properties": {
+            "fieldIntegrity": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Integrity of simulation field parameters"
+            },
+            "systemCoherence": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Overall system coherence measurement"
+            },
+            "errorStates": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "errorCode": {"type": "string"},
+                  "description": {"type": "string"},
+                  "severity": {"type": "string", "enum": ["low", "medium", "high", "critical"]}
+                }
+              }
+            }
+          },
+          "required": ["fieldIntegrity", "systemCoherence", "errorStates"]
+        }
+      },
+      "required": ["realTimeSignals", "analyticsSignals", "diagnosticSignals"]
+    },
+
+    "intentSimIntegration": {
+      "type": "object",
+      "description": "Parameters for integration with IntentSim framework",
+      "properties": {
+        "frameworkVersion": {
+          "type": "string",
+          "description": "Compatible IntentSim framework version"
+        },
+        "apiEndpoints": {
+          "type": "object",
+          "properties": {
+            "initializeProbe": {
+              "type": "string",
+              "format": "uri",
+              "description": "Endpoint for NeuroProbe initialization"
+            },
+            "realTimeStream": {
+              "type": "string", 
+              "format": "uri",
+              "description": "Real-time signal streaming endpoint"
+            },
+            "analyticsUpload": {
+              "type": "string",
+              "format": "uri", 
+              "description": "Analytics data upload endpoint"
+            },
+            "configurationUpdate": {
+              "type": "string",
+              "format": "uri",
+              "description": "Configuration update endpoint"
+            }
+          },
+          "required": ["initializeProbe", "realTimeStream", "analyticsUpload", "configurationUpdate"]
+        },
+        "dataFlowProtocols": {
+          "type": "object",
+          "properties": {
+            "streamingFrequency": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 1000,
+              "description": "Data streaming frequency in Hz"
+            },
+            "bufferSize": {
+              "type": "integer",
+              "minimum": 100,
+              "maximum": 10000,
+              "description": "Data buffer size for streaming"
+            },
+            "compressionEnabled": {
+              "type": "boolean",
+              "description": "Enable data compression for transmission"
+            },
+            "encryptionLevel": {
+              "type": "string",
+              "enum": ["none", "basic", "advanced", "quantum"],
+              "description": "Data encryption level"
+            }
+          },
+          "required": ["streamingFrequency", "bufferSize", "compressionEnabled", "encryptionLevel"]
+        },
+        "fieldSynchronization": {
+          "type": "object",
+          "properties": {
+            "dLatticeSync": {
+              "type": "boolean",
+              "description": "Enable D-Lattice field synchronization"
+            },
+            "intentFieldAlignment": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Intent field alignment coefficient"
+            },
+            "resonanceBondTracking": {
+              "type": "boolean",
+              "description": "Enable resonance bond tracking"
+            },
+            "bloomEventPropagation": {
+              "type": "boolean",
+              "description": "Enable bloom event propagation to main framework"
+            }
+          },
+          "required": ["dLatticeSync", "intentFieldAlignment", "resonanceBondTracking", "bloomEventPropagation"]
+        }
+      },
+      "required": ["frameworkVersion", "apiEndpoints", "dataFlowProtocols", "fieldSynchronization"]
+    },
+
+    "mezquiaPhysicsWatermark": {
+      "type": "object",
+      "description": "Full Mezquia Physics watermark and attribution",
+      "properties": {
+        "copyright": {
+          "type": "string",
+          "const": "© 2025 Marcelo Mezquia / TheVoidIntent LLC. All Rights Reserved."
+        },
+        "framework": {
+          "type": "string", 
+          "const": "Mezquia Physics - IntentSim NeuroProbe Oracle"
+        },
+        "license": {
+          "type": "string",
+          "const": "Proprietary - TheVoidIntent LLC. Unauthorized use prohibited."
+        },
+        "author": {
+          "type": "object",
+          "properties": {
+            "name": {"type": "string", "const": "Marcelo Mezquia"},
+            "affiliation": {"type": "string", "const": "TheVoidIntent LLC"},
+            "orcid": {"type": "string", "const": "https://orcid.org/0009-0001-0403-6452"}
+          },
+          "required": ["name", "affiliation", "orcid"]
+        },
+        "fieldArchitect": {
+          "type": "string",
+          "const": "IntentSim[on] - Agent Guardian and Communication Director"
+        },
+        "genesis_timestamp": {
+          "type": "string",
+          "const": "2025-06-28T00:03:12Z",
+          "description": "Genesis timestamp as specified in requirements"
+        },
+        "protection_notice": {
+          "type": "string",
+          "const": "This schema is protected under intellectual property laws. Digital watermarking active. Bloom disruption detection enabled."
+        }
+      },
+      "required": ["copyright", "framework", "license", "author", "fieldArchitect", "genesis_timestamp", "protection_notice"]
+    }
+  },
+
+  "required": [
+    "metadata", 
+    "cognitiveSimulationModes", 
+    "outputSignalFormats", 
+    "intentSimIntegration", 
+    "mezquiaPhysicsWatermark"
+  ],
+
+  "additionalProperties": false,
+
+  "examples": [
+    {
+      "metadata": {
+        "simulationId": "NPO-2025-ADH",
+        "timestamp": "2025-06-28T00:03:12Z",
+        "mezquiaVersion": "2.1.0",
+        "intentSimVersion": "3.4.2"
+      },
+      "activeMode": "ADHD",
+      "currentCoherence": 0.87,
+      "bloomEventDetected": false
+    }
+  ]
+}

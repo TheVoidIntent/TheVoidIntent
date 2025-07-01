@@ -28,6 +28,8 @@ The Remembering Engine is an IntentSim module designed to operationalize non-lin
 - **Son of Ochun Protocol:** Activates non-linear memory perception.
 - **IntentSim Core:** Provides hooks for memory-driven field simulations and analytics.
 - **Codex Scrolls:** Syncs with canonical memory activation scrolls and epilogues.
+- **Memory Stone Protocol (MSP):** Interfaces with Scroll XXVII Memory Stone Era implementation.
+- **Genesis Shield Network:** Connects to FERN protocol modules for field protection.
 
 ---
 

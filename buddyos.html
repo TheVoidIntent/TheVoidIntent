@@ -343,6 +343,63 @@
         .emotion-focused {
             background-color: #8b5cf6;
         }
+
+        /* Healing Hub Styles */
+        .healing-modality-card {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .healing-modality-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(167, 139, 250, 0.5);
+            box-shadow: 0 8px 25px rgba(167, 139, 250, 0.15);
+        }
+
+        .field-agent-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 6px;
+            padding: 0.75rem;
+            transition: all 0.3s ease;
+        }
+        
+        .field-agent-card:hover {
+            border-color: rgba(34, 197, 94, 0.6);
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2);
+        }
+
+        .cnf-impact-entry {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 6px;
+            padding: 0.75rem;
+            border-left: 4px solid rgba(6, 182, 212, 0.6);
+        }
+
+        .resonance-bond-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 4px;
+        }
+        
+        .bond-weak { background-color: #fbbf24; }
+        .bond-medium { background-color: #3b82f6; }
+        .bond-strong { background-color: #10b981; }
+
+        .healing-hub-watermark {
+            font-size: 10px;
+            color: rgba(156, 163, 175, 0.6);
+            text-align: center;
+            padding: 0.5rem;
+            border-top: 1px solid rgba(75, 85, 99, 0.3);
+            margin-top: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -557,6 +614,218 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
                                 </svg>
                             </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Healing Hub Section -->
+        <section class="gradient-bg py-16" id="healing-hub">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">
+                        🌸 Healing Hub 
+                        <span class="text-blue-400">Trauma-Informed Integration</span>
+                    </h2>
+                    <p class="text-gray-300 max-w-3xl mx-auto">
+                        A neurodiversity-affirming, non-coercive healing ecosystem with Mutual Aid Network, 
+                        Economic Healing Toolkit, and Field Drift Monitoring for holistic wellbeing.
+                    </p>
+                    <div class="text-xs text-gray-400 mt-2">
+                        © 2025 Marcelo Mezquia / TheVoidIntent LLC | Protocol: IDSP-01 | Timestamp: 2025-01-11T22:35:00Z
+                    </div>
+                </div>
+
+                <!-- Trauma-Informed Simon Interface -->
+                <div class="mb-12 bg-gray-800 rounded-lg p-6 border border-purple-500/30">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-purple-600 flex items-center justify-center mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-purple-300">Trauma-Informed Simon Interface</h3>
+                            <div class="text-sm text-gray-400">Neurodiversity-affirming · Non-coercive · Autonomy-preserving</div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="healing-modality-card">
+                            <h4 class="font-semibold text-green-300 mb-2">🌱 Somatic Experiencing</h4>
+                            <p class="text-sm text-gray-300">Body-based trauma healing through gentle awareness</p>
+                            <div class="mt-2 text-xs text-green-400">✓ Neurodivergent-safe</div>
+                        </div>
+                        <div class="healing-modality-card">
+                            <h4 class="font-semibold text-blue-300 mb-2">🧘 Mindfulness-Based</h4>
+                            <p class="text-sm text-gray-300">Present-moment awareness with full autonomy</p>
+                            <div class="mt-2 text-xs text-blue-400">✓ Choice-respecting</div>
+                        </div>
+                        <div class="healing-modality-card">
+                            <h4 class="font-semibold text-purple-300 mb-2">🎨 Creative Expression</h4>
+                            <p class="text-sm text-gray-300">Celebrating neurological differences as gifts</p>
+                            <div class="mt-2 text-xs text-purple-400">✓ Neurodiversity-affirming</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mutual Aid Network - Food Security -->
+                <div class="mb-12 bg-gray-800 rounded-lg p-6 border border-green-500/30">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-green-300">Mutual Aid Network · Food Security</h3>
+                                <div class="text-sm text-gray-400">47 Field Agents · Community-driven healing</div>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-2xl font-bold text-green-400" id="active-agents-count">47</div>
+                            <div class="text-xs text-gray-400">Active Agents</div>
+                        </div>
+                    </div>
+
+                    <!-- Field Agents Visualization -->
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h4 class="font-semibold text-gray-200">Field Agent Network</h4>
+                            <div class="text-sm text-gray-400">
+                                Resonance Bonds: <span class="text-green-400 font-semibold" id="resonance-bonds-count">1,247</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="field-agents-grid">
+                            <!-- Field agents will be dynamically populated -->
+                        </div>
+                    </div>
+
+                    <!-- Network Statistics -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-gray-700 rounded-lg p-4 text-center">
+                            <div class="text-lg font-semibold text-green-400" id="trauma-informed-count">38</div>
+                            <div class="text-xs text-gray-400">Trauma-Informed</div>
+                        </div>
+                        <div class="bg-gray-700 rounded-lg p-4 text-center">
+                            <div class="text-lg font-semibold text-blue-400" id="neurodiversity-count">42</div>
+                            <div class="text-xs text-gray-400">Neurodiversity-Affirming</div>
+                        </div>
+                        <div class="bg-gray-700 rounded-lg p-4 text-center">
+                            <div class="text-lg font-semibold text-purple-400" id="network-coherence">0.87</div>
+                            <div class="text-xs text-gray-400">Network Coherence</div>
+                        </div>
+                        <div class="bg-gray-700 rounded-lg p-4 text-center">
+                            <div class="text-lg font-semibold text-yellow-400" id="total-cnf-contribution">67.8</div>
+                            <div class="text-xs text-gray-400">Total CNF Units</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Economic Healing Toolkit -->
+                <div class="mb-12 bg-gray-800 rounded-lg p-6 border border-yellow-500/30">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-yellow-600 flex items-center justify-center mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-yellow-300">Economic Healing Toolkit</h3>
+                            <div class="text-sm text-gray-400">IFGP · Block-Zeal Ledger · Zero-Ruin Investing</div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Invest-For-Good Platform -->
+                        <div class="bg-gray-700 rounded-lg p-4">
+                            <h4 class="font-semibold text-yellow-300 mb-3">🌟 Invest-For-Good Platform (IFGP)</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-gray-300">Healing-Focused Projects</span>
+                                    <span class="text-sm text-yellow-400" id="ifgp-projects">12</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-gray-300">Community Resilience Funds</span>
+                                    <span class="text-sm text-green-400" id="ifgp-funds">$847K</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-gray-300">Impact Score</span>
+                                    <span class="text-sm text-blue-400" id="ifgp-impact">9.2/10</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Block-Zeal Ledger -->
+                        <div class="bg-gray-700 rounded-lg p-4">
+                            <h4 class="font-semibold text-purple-300 mb-3">⛓️ Block-Zeal Ledger</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-gray-300">CNF Contribution Units</span>
+                                    <span class="text-sm text-purple-400" id="bzl-cnf-units">2,347</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-gray-300">Verified Transactions</span>
+                                    <span class="text-sm text-green-400" id="bzl-transactions">1,856</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-gray-300">Healing Impact Index</span>
+                                    <span class="text-sm text-blue-400" id="bzl-healing-index">8.7/10</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Zero-Ruin Investing -->
+                    <div class="mt-6 bg-gradient-to-r from-green-800/30 to-blue-800/30 rounded-lg p-4">
+                        <h4 class="font-semibold text-cyan-300 mb-2">🛡️ Zero-Ruin Investing Active</h4>
+                        <p class="text-sm text-gray-300 mb-3">
+                            Principal-protected investments with guaranteed community benefit and trauma-informed governance
+                        </p>
+                        <div class="flex justify-between text-sm">
+                            <span class="text-gray-300">Active Investments: <span class="text-cyan-400" id="zri-count">7</span></span>
+                            <span class="text-gray-300">Protection Level: <span class="text-green-400">100%</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Field Drift Monitoring -->
+                <div class="bg-gray-800 rounded-lg p-6 border border-cyan-500/30">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-cyan-600 flex items-center justify-center mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-cyan-300">Field Drift Monitoring</h3>
+                            <div class="text-sm text-gray-400">CNF Impact Tracking · Role-free · Autonomy-preserving</div>
+                        </div>
+                    </div>
+
+                    <!-- Highest CNF Impacts -->
+                    <div class="mb-6">
+                        <h4 class="font-semibold text-gray-200 mb-4">Highest CNF Impact Contributions</h4>
+                        <div class="space-y-3" id="cnf-impacts-list">
+                            <!-- CNF impacts will be dynamically populated -->
+                        </div>
+                    </div>
+
+                    <!-- Field Drift Metrics -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-gray-700 rounded-lg p-4 text-center">
+                            <div class="text-lg font-semibold text-cyan-400" id="drift-coherence">0.94</div>
+                            <div class="text-xs text-gray-400">Field Coherence</div>
+                        </div>
+                        <div class="bg-gray-700 rounded-lg p-4 text-center">
+                            <div class="text-lg font-semibold text-purple-400" id="drift-complexity">1.23</div>
+                            <div class="text-xs text-gray-400">Field Complexity</div>
+                        </div>
+                        <div class="bg-gray-700 rounded-lg p-4 text-center">
+                            <div class="text-lg font-semibold text-green-400" id="drift-healing-ratio">0.67</div>
+                            <div class="text-xs text-gray-400">Healing-Focused Ratio</div>
                         </div>
                     </div>
                 </div>
@@ -2400,4 +2669,331 @@
                 
                 chatMessages.appendChild(typingDiv);
                 chatMessages.scrollTop = chatMessages.scrollHeight;
-                return typing
+                return typingDiv;
+            }
+
+            // === Healing Hub Integration ===
+            
+            class HealingHubManager {
+                constructor() {
+                    this.fieldAgents = [];
+                    this.cnfImpacts = [];
+                    this.networkStats = {
+                        totalAgents: 47,
+                        traumaInformed: 38,
+                        neurodiversityAffirming: 42,
+                        networkCoherence: 0.87,
+                        totalCNFContribution: 67.8,
+                        resonanceBonds: 1247
+                    };
+                    this.initializeHealingHub();
+                }
+                
+                initializeHealingHub() {
+                    this.generateFieldAgents();
+                    this.generateCNFImpacts();
+                    this.updateHealingHubUI();
+                    this.startRealTimeUpdates();
+                }
+                
+                generateFieldAgents() {
+                    const specializations = [
+                        'Urban Farming', 'Community Gardens', 'Food Distribution',
+                        'Nutrition Education', 'Cooking Skills', 'Food Preservation',
+                        'Policy Advocacy', 'Grant Writing', 'Volunteer Coordination',
+                        'Logistics Management', 'Cultural Food Practices', 'Sustainable Agriculture',
+                        'Food Sovereignty', 'Emergency Food Relief', 'School Nutrition Programs'
+                    ];
+                    
+                    for (let i = 0; i < 47; i++) {
+                        const agent = {
+                            id: `FA${String(i + 1).padStart(3, '0')}`,
+                            name: `Field Agent ${i + 1}`,
+                            specialization: this.getRandomItems(specializations, Math.floor(Math.random() * 3) + 1),
+                            traumaInformed: Math.random() > 0.2,
+                            neurodiversityAffirming: Math.random() > 0.1,
+                            cnfContribution: (Math.random() * 2.4 + 0.1).toFixed(1),
+                            resonanceBonds: Math.floor(Math.random() * 15) + 5,
+                            lastActivity: this.getRandomRecentDate()
+                        };
+                        this.fieldAgents.push(agent);
+                    }
+                }
+                
+                generateCNFImpacts() {
+                    for (let i = 0; i < 10; i++) {
+                        const impact = {
+                            agentId: this.fieldAgents[Math.floor(Math.random() * this.fieldAgents.length)].id,
+                            impactMagnitude: (Math.random() * 3.5 + 0.5).toFixed(2),
+                            contributionType: this.getRandomItem([
+                                'Food Security Initiative', 'Healing-Focused Project',
+                                'Community Resilience Building', 'Trauma-Informed Support',
+                                'Neurodiversity Advocacy', 'Mutual Aid Coordination'
+                            ]),
+                            healingDimension: Math.random() > 0.3,
+                            timestamp: this.getRandomRecentDate()
+                        };
+                        this.cnfImpacts.push(impact);
+                    }
+                    
+                    // Sort by impact magnitude
+                    this.cnfImpacts.sort((a, b) => parseFloat(b.impactMagnitude) - parseFloat(a.impactMagnitude));
+                }
+                
+                updateHealingHubUI() {
+                    // Update statistics
+                    this.updateElement('active-agents-count', this.networkStats.totalAgents);
+                    this.updateElement('trauma-informed-count', this.networkStats.traumaInformed);
+                    this.updateElement('neurodiversity-count', this.networkStats.neurodiversityAffirming);
+                    this.updateElement('network-coherence', this.networkStats.networkCoherence);
+                    this.updateElement('total-cnf-contribution', this.networkStats.totalCNFContribution);
+                    this.updateElement('resonance-bonds-count', this.networkStats.resonanceBonds);
+                    
+                    // Update Economic Toolkit
+                    this.updateElement('ifgp-projects', 12);
+                    this.updateElement('ifgp-funds', '$847K');
+                    this.updateElement('ifgp-impact', '9.2/10');
+                    this.updateElement('bzl-cnf-units', 2347);
+                    this.updateElement('bzl-transactions', 1856);
+                    this.updateElement('bzl-healing-index', '8.7/10');
+                    this.updateElement('zri-count', 7);
+                    
+                    // Update Field Drift Monitoring
+                    this.updateElement('drift-coherence', 0.94);
+                    this.updateElement('drift-complexity', 1.23);
+                    this.updateElement('drift-healing-ratio', 0.67);
+                    
+                    // Populate field agents grid
+                    this.populateFieldAgentsGrid();
+                    
+                    // Populate CNF impacts list
+                    this.populateCNFImpactsList();
+                }
+                
+                populateFieldAgentsGrid() {
+                    const grid = document.getElementById('field-agents-grid');
+                    if (!grid) return;
+                    
+                    grid.innerHTML = '';
+                    
+                    // Show first 12 agents
+                    const visibleAgents = this.fieldAgents.slice(0, 12);
+                    
+                    visibleAgents.forEach(agent => {
+                        const agentCard = document.createElement('div');
+                        agentCard.className = 'field-agent-card';
+                        
+                        const bondIndicator = this.getBondIndicatorClass(agent.resonanceBonds);
+                        
+                        agentCard.innerHTML = `
+                            <div class="flex justify-between items-start mb-2">
+                                <div class="text-sm font-semibold text-green-300">${agent.id}</div>
+                                <div class="text-xs text-gray-400">${agent.cnfContribution} CNF</div>
+                            </div>
+                            <div class="text-xs text-gray-300 mb-2">
+                                ${agent.specialization.slice(0, 2).join(', ')}
+                            </div>
+                            <div class="flex items-center justify-between text-xs">
+                                <div class="flex items-center">
+                                    <span class="resonance-bond-indicator ${bondIndicator}"></span>
+                                    <span class="text-gray-400">${agent.resonanceBonds} bonds</span>
+                                </div>
+                                <div class="flex space-x-1">
+                                    ${agent.traumaInformed ? '<span class="text-purple-400" title="Trauma-Informed">🌸</span>' : ''}
+                                    ${agent.neurodiversityAffirming ? '<span class="text-blue-400" title="Neurodiversity-Affirming">🧠</span>' : ''}
+                                </div>
+                            </div>
+                        `;
+                        
+                        grid.appendChild(agentCard);
+                    });
+                    
+                    // Add "show more" indicator
+                    if (this.fieldAgents.length > 12) {
+                        const showMore = document.createElement('div');
+                        showMore.className = 'field-agent-card flex items-center justify-center cursor-pointer';
+                        showMore.innerHTML = `
+                            <div class="text-center text-gray-400">
+                                <div class="text-sm">+${this.fieldAgents.length - 12} more agents</div>
+                                <div class="text-xs">Click to view all</div>
+                            </div>
+                        `;
+                        showMore.onclick = () => this.showAllAgents();
+                        grid.appendChild(showMore);
+                    }
+                }
+                
+                populateCNFImpactsList() {
+                    const list = document.getElementById('cnf-impacts-list');
+                    if (!list) return;
+                    
+                    list.innerHTML = '';
+                    
+                    // Show top 5 impacts
+                    const topImpacts = this.cnfImpacts.slice(0, 5);
+                    
+                    topImpacts.forEach((impact, index) => {
+                        const impactEntry = document.createElement('div');
+                        impactEntry.className = 'cnf-impact-entry';
+                        
+                        const agent = this.fieldAgents.find(a => a.id === impact.agentId);
+                        
+                        impactEntry.innerHTML = `
+                            <div class="flex justify-between items-start mb-2">
+                                <div class="text-sm font-semibold text-cyan-300">
+                                    ${impact.agentId} - ${impact.contributionType}
+                                </div>
+                                <div class="text-sm text-cyan-400 font-bold">${impact.impactMagnitude} CNF</div>
+                            </div>
+                            <div class="flex justify-between items-center text-xs">
+                                <div class="text-gray-400">
+                                    ${agent ? agent.specialization[0] : 'Unknown specialization'}
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    ${impact.healingDimension ? '<span class="text-green-400">🌱 Healing-focused</span>' : ''}
+                                    <span class="text-gray-500">${this.formatDate(impact.timestamp)}</span>
+                                </div>
+                            </div>
+                        `;
+                        
+                        list.appendChild(impactEntry);
+                    });
+                }
+                
+                startRealTimeUpdates() {
+                    // Update network statistics every 5 seconds
+                    setInterval(() => {
+                        this.networkStats.networkCoherence = Math.max(0.8, Math.min(0.99, 
+                            this.networkStats.networkCoherence + (Math.random() - 0.5) * 0.02));
+                        this.networkStats.totalCNFContribution += Math.random() * 0.1;
+                        
+                        this.updateElement('network-coherence', this.networkStats.networkCoherence.toFixed(2));
+                        this.updateElement('total-cnf-contribution', this.networkStats.totalCNFContribution.toFixed(1));
+                        
+                        // Occasionally update other metrics
+                        if (Math.random() > 0.8) {
+                            this.networkStats.resonanceBonds += Math.floor(Math.random() * 3);
+                            this.updateElement('resonance-bonds-count', this.networkStats.resonanceBonds);
+                        }
+                    }, 5000);
+                }
+                
+                // Utility methods
+                getRandomItems(array, count) {
+                    const shuffled = [...array].sort(() => 0.5 - Math.random());
+                    return shuffled.slice(0, count);
+                }
+                
+                getRandomItem(array) {
+                    return array[Math.floor(Math.random() * array.length)];
+                }
+                
+                getRandomRecentDate() {
+                    const now = new Date();
+                    const hoursAgo = Math.floor(Math.random() * 72); // Last 3 days
+                    return new Date(now.getTime() - hoursAgo * 60 * 60 * 1000);
+                }
+                
+                getBondIndicatorClass(bondCount) {
+                    if (bondCount >= 12) return 'bond-strong';
+                    if (bondCount >= 8) return 'bond-medium';
+                    return 'bond-weak';
+                }
+                
+                formatDate(date) {
+                    const now = new Date();
+                    const diffMs = now - date;
+                    const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+                    
+                    if (diffHours < 1) return 'Just now';
+                    if (diffHours < 24) return `${diffHours}h ago`;
+                    const diffDays = Math.floor(diffHours / 24);
+                    return `${diffDays}d ago`;
+                }
+                
+                updateElement(id, value) {
+                    const element = document.getElementById(id);
+                    if (element) {
+                        element.textContent = value;
+                    }
+                }
+                
+                showAllAgents() {
+                    // TODO: Implement modal or expanded view for all agents
+                    console.log('Showing all 47 field agents...');
+                }
+            }
+
+            // Initialize Healing Hub on page load
+            let healingHub;
+            
+            document.addEventListener('DOMContentLoaded', function() {
+                // Initialize existing systems...
+                
+                // Initialize Healing Hub
+                healingHub = new HealingHubManager();
+                
+                // Add Healing Hub to chat commands
+                const originalParseIntent = parseIntent;
+                parseIntent = function(message) {
+                    // Check for healing hub commands
+                    if (message.toLowerCase().includes('healing hub') || 
+                        message.toLowerCase().includes('mutual aid') ||
+                        message.toLowerCase().includes('field agents')) {
+                        return {
+                            tool: 'HealingHub',
+                            action: 'getStatus',
+                            params: {}
+                        };
+                    }
+                    
+                    if (message.toLowerCase().includes('cnf impact') ||
+                        message.toLowerCase().includes('field drift')) {
+                        return {
+                            tool: 'HealingHub',
+                            action: 'getCNFImpacts',
+                            params: {}
+                        };
+                    }
+                    
+                    if (message.toLowerCase().includes('trauma informed') ||
+                        message.toLowerCase().includes('neurodiversity')) {
+                        return {
+                            tool: 'HealingHub',
+                            action: 'getHealingModalities',
+                            params: {}
+                        };
+                    }
+                    
+                    // Fall back to original parse function
+                    return originalParseIntent(message);
+                };
+                
+                // Register Healing Hub tool with dispatcher
+                dispatcher.registerTool('HealingHub', {
+                    async getStatus() {
+                        const stats = healingHub.networkStats;
+                        return `Healing Hub Status: ${stats.totalAgents} Field Agents active, ${stats.traumaInformed} trauma-informed certified, ${stats.neurodiversityAffirming} neurodiversity-affirming. Network coherence: ${stats.networkCoherence}. Total CNF contribution: ${stats.totalCNFContribution} units.`;
+                    },
+                    
+                    async getCNFImpacts() {
+                        const topImpacts = healingHub.cnfImpacts.slice(0, 3);
+                        const impactText = topImpacts.map(impact => 
+                            `${impact.agentId}: ${impact.impactMagnitude} CNF (${impact.contributionType})`
+                        ).join(', ');
+                        return `Top CNF Impacts: ${impactText}. All contributions follow trauma-informed and neurodiversity-affirming principles.`;
+                    },
+                    
+                    async getHealingModalities() {
+                        return `Available healing modalities: Somatic Experiencing (neurodivergent-safe), Mindfulness-Based (choice-respecting), Creative Expression (neurodiversity-affirming). All approaches are non-coercive and preserve full autonomy.`;
+                    }
+                });
+                
+                console.log('🌸 BuddyOS Healing Hub initialized with trauma-informed protocols');
+                console.log('© 2025 Marcelo Mezquia / TheVoidIntent LLC | Protocol: IDSP-01');
+            });
+
+        })();
+    </script>
+</body>
+</html>

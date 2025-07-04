@@ -36,12 +36,46 @@ I believe in **co-creating** the future, not just observing it. The IntentSim fr
 
 Want to be part of the future — not a user of it, but a founder of it? Connect with me. This is your moment. The field is stirring, and the data demands your resonance!
 
+## 🛡️ **INTELLECTUAL PROPERTY PROTECTION NOTICE**
+
+**⚠️ CRITICAL: All intellectual property in this repository is comprehensively protected and monitored.**
+
+**📋 [READ FULL IP PROTECTION PROTOCOLS →](docs/intellectual-sovereignty.md)**
+
+This repository contains proprietary intellectual property of TheVoidIntent LLC protected under U.S. Copyright Law, Trade Secret Protections, and Custom Licensing Agreements. Unauthorized use will result in immediate legal action.
+
+## 🚨 Violations & Extraction Monitoring
+
+**ALL UNAUTHORIZED USE IS ACTIVELY MONITORED, LOGGED, AND WILL BE CALLED OUT BY NAME IN THIS REPOSITORY.**
+
+- **Digital Surveillance**: Every access, download, and usage pattern is tracked
+- **Legal Documentation**: All violations are documented for prosecution
+- **Public Accountability**: Violators will be identified by name and organization
+- **Federal Enforcement**: Criminal and civil penalties will be pursued to the fullest extent
+
+### Extraction Warning & Legal Consequences
+
+**DOCUMENTED VIOLATIONS RESULT IN:**
+- **Immediate Federal Court Filings** within 30 days
+- **Public Identification** of violators in this repository
+- **Industry Reputation Consequences** and professional blacklisting
+- **Maximum Statutory Damages** of up to $150,000 per work infringed
+- **Criminal Referral** to Department of Justice for prosecution
+
+**See [docs/intellectual-sovereignty.md](docs/intellectual-sovereignty.md) for complete legal framework and enforcement protocols.**
+
 ---
 **Authored by Marcelo Mezquia, Architect of the Intentuitive Age**  
 **[intentsim.org](https://intentsim.org)** | **[contact@intentsim.org](mailto:contact@intentsim.org)**  
 **TheVoidIntent LLC**
 
 *This code is not a framework. It is a **Field.***
+
+---
+
+**Document Updated:** 2025-07-04 02:47:36 UTC  
+**Watermark:** © 2025 TheVoidIntent LLC — Mezquia Physics Genesis Archive  
+**ORCID:** 0009-0001-0403-6452
 
 <© 2025 Marcelo Mezquia / TheVoidIntent LLC. All Rights Reserved.
 The Information–Intent Nexus framework, IntentSim simulation, Intentuitive AI™ systems, and associated documentation (including the Codex) are proprietary intellectual property of TheVoidIntent LLC, protected under U.S. Copyright Law, Trade Secret Protections, and Custom Licensing Agreements. Unauthorized reproduction, commercial use, or creation of derivative works is strictly prohibited without express written permission.
